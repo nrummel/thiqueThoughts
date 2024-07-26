@@ -1,5 +1,5 @@
 ---
-title: <% tp.file.title %>
+title: "Climbing Grades: A Mathematical Modeler Perspective"
 draft: false
 tags:
 ---
