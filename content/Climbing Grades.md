@@ -1,9 +1,8 @@
-```
+---
 title: <% tp.file.title %>
 draft: false
 tags:
-    -
-```
+---
 ## Background 
 Comparison of achievement is fundamental aspect of sport, and for some sports the measurability of the activity allows for an objective view. For instance, in track and field, barring a large wind, times are comparable even if one race took place on the other side of the planet from the other. Other sports the quantification of difficulty is less straight forward. Is a tail fip more impressive than a three sixty on a skate board? Does a double back tuck take more skill and strength than a front layout with a full twist for gymnasts?  Experts in these sports will answer confidentially, but it can be hard as an outsider to know who to believe. Even as those who participate in these less measurable sports can be confused or uncertain on how to judge what feats are the most impressive and ground breaking. In many ways, the experts are just trusted at face value, but to me this is somewhat unsatisfying.
 
