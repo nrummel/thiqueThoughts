@@ -28,7 +28,7 @@ There is a choice of distribution for both the *experienced difficulty*, $h(X,y,
 >When enough samples are collected the mean of samples is another random variable that is distributed normally. This is known as the [Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem).
 
 >[!example]
->![[public/fig/dist.png]]
+>![[fig/dist.png]]
 >Above are candidate distributions for a hypothetical "V5". All have a mean grade of "V5", but with different behavior.
   
 While the normal distribution is how most readers may first conceptualize a grade viewed as a random variable, there is good reason to think that the *experienced difficulty* could be distributed in a variety of ways. In this paper, the uniform, the normal distribution, the Gamma distribution, Gaussian Mixtures and Kernel Density Estimates (KDE) are considered. 
@@ -51,10 +51,11 @@ Also, there is a built-in incentive in this dataset to take the higher grade bec
 In either case, these non-random motivations create roadblocks for accurately estimating bias for any ascent or climber. Bias is philosophically fascinating to contemplate, and in the science/mathematics bias is just a blanket term to describe a type of error that we can separate out from the underlying model. I want to be clear that climber have a variety of reasons to contribute this *bias* to the grade they report to others. It may be a conscious or unconscious decision of the climber. Intentional or not it is a factor. From analysis of the data and consideration of the physical system, the model describes grades as random variables. Despite these pitfalls, the bias for each individual may be observed and accounted for to some degree. The [[Debiasing Algo.png|algorithm]] used to debias reported grades} is done by estimating the expected (average) *bias* through by sampling a climbers log book then of comparing the reported grade of this individual to the mean *reported grade*. Assuming that over the entire population of reports that *bias* is centered at 0, this algorithm should properly estimate an individual's average *bias* given enough data. While these assumptions may be violated, this debias-ing process should recover *experienced difficulty* with some accuracy. This algorithm is more fully described in the appendix. See below: 
 
 $$
-\begin{align*}
-\{g_n\}_{n=1}^N & \text{is the set of $N$ report grades}\\
-\{b_n\}_{n=1}^N &\approx \big\{g_n - \mathbb{E}[b(X_n)]\big\}_{n=1}^N
-\end{align*}
+
+\{g_n\}_{n=1}^N  \text{is the set of $N$ report grades}
+$$
+$$
+\{b_n\}_{n=1}^N \approx \big\{g_n - \mathbb{E}[b(X_n)]\big\}_{n=1}^N
 $$
 >[!todo]
 >After discussions with Dale, I believe we could better recover $X$ if instead we write $f_X(x) = f_W(w) * f_Y(-y)$. There is more to flesh out here. 

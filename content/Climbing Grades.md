@@ -20,8 +20,8 @@ The current relationship many climbers have with quantifying difficulty is probl
 
 Let's try to better understand grades, by thinking about them as a scientist would. What is a grade? I like to think of a grade like a measurement or a function. Doing a climb is an experience, and at the end of the experience (upon completion of a climb) the climber can reflect and label what they just did. This is analogous to a scientist using an instrument to measure some physical phenomena. The underlying system has some features, the instrument takes those feature and produces a numeric output. We can use math to describe this. The instrument can be thought of as a function and the physical features are inputs. The measurement is numeric value is evaluating the function at these particular inputs. In the real world, measurements have error. This can come from a variety of sources. A simple example is that of precision. If the ruler only has marks for millimeters, then it is impossible to measure more accurately that up to millimeters. Thus we have uncertainty of $\approx \frac{1}{2}$mm on each measurement. We can account for this by saying that the measurement has some random error. 
 
->[!question] 
->You are probably thinking: "This is all nice and good, but I thought we were talking about grades?" 
+>[!question] You are probably thinking
+> "This is all nice and good, but I thought we were talking about grades?" 
 
 I know we are getting there I promise. Let's root ourself in what we came here to think about. For now I think it is worth thinking about the function  $f$ that represents the process of experiencing a climb to have multiple inputs. 
 ## What Contributes to a Grade 
@@ -61,17 +61,13 @@ $$
 
 The change to upper case letters signifies that those are random variables with some underlying distribution. Thinking of them this way allow us to formally (mathematically) push a bunch of stuff we cannot measure under the rug. 
 
->[!seealso]
->I just took a class on measure theory that made sense of how random variables can be thought of as "measurable functions". Going deep on the theory can help take the mysticism out of randomness. This is definitely too much for this discussion, but if you are interested I followed [Measure Theory, Probability, and Stochastic Processes by Le Gall](https://books.google.com/books/about/Measure_Theory_Probability_and_Stochasti.html?id=Ba2YEAAAQBAJ&source=kp_book_description)
->
-
 Notice, that we assume that the climb doesn't change, thus $y$ stays lower case and is not random. Because we assume climbers and the environmental factors can change (they can and do vary), then we expect and do see in the data that climbing grades will vary. 
 This hopefully gives useful and actionable information by capturing most of the behavior of how difficulty is actualized. If we did have more data for a particular climb on multiple ascents, we could incorporate this data through [[Extending Random Climbing Grades|conditional distributions]].
 
 One can visualize continuous random variables through their probability distribution function (when it exists).
 
 >[!example]
->![[public/fig/dist.png]]
+>![[fig/dist.png]]
 >Above are candidate distributions for a hypothetical "V5". All have an average grade of "V5", but with different behavior. This allows us to model one "V5" where mostly everyone agrees, but on another "V5" where there is much disagreement.
 ## Bias
 To account for *bias*, I wrote a (simple perhaps naive) [[Debiasing Algo.png|algorithm]] to estimate the expected bias for a particular climber $\mathbb{E}[b(X)]$. This allows then estimate the *experienced grade*. You can think of this as Bayesian approach. We are conditioning on the expected bias. Thus we can obtained the "debiased" grade:
@@ -81,8 +77,8 @@ $$
 Now given a sample $\{g_n\}_{n=1}^N$ of these debiased grades we can estimate a distribution for the debiased grade of a particular climb $D_y$. You can read more about how this is done [[Climbing Grades Dirty Details#Bias|here]].
 # Takeaways
 
->[!question]
->NOW you are probably asking, "Ok,ok... but Mr. Thique, why? Like who cares, I get you had a good time thinking about this and you sound a lot like a guy who spend too much time on his computer. That's nice, but like does this help climbers?"
+>[!question] Now, you are probably asking:
+>"Ok,ok... but Mr. Thique, why? Like who cares, I get you had a good time thinking about this and you sound a lot like a guy who spend too much time on his computer. That's nice, but like does this help climbers?"
 
 Yes! This allows us to leverage the data we have to give us actionable information. We can better answer questions like: 
 - *How hard is that climb?* Now, we can compute the probability that YOU will think a climb is certain grade. 
@@ -92,6 +88,14 @@ Yes! This allows us to leverage the data we have to give us actionable informati
 - *Which grade is right?* Ah, now we see that the grade is a random variable, so really you should be asking is what is the probability that I will think that climb feels a certain grade to me on a particular day. 
 - *Can I take personal grades?* YES! In fact by taking personal grades, you give others more accurate information about what they may experience on that climb.
 
->[!question]
->Ok, now you are saying: "But like I want to see this done for real...."
+This mathematical interpretation of grades can better inform how grades are philosophically considered. Grades as a functions of random variables (therefore grades are also random variables). We think of each climber realizing this random variable when they send. In other words they are sampling when they complete an ascent. This adds an interesting perspective on grades in general and injects a certain amount of grace when hearing what others think about a particular climb. Because it is mathematically impossible that one will have the same experience as another.
+
+Hopefully climbers will think critically about *bias*. As discussed earlier *bias* is not easily estimated and the assumptions made to do so are inherently flawed, see [[Climbing Grades Dirty Details#Bias|the dirty details]]. Hopefully this motivates climbers to be thoughtful when reporting their grade. Choose to report not just the grade that feels good or the one that others take, but really what one thinks they experienced. Conscious *bias* is dishonest and does not help others in estimating the difficulty they will experience when they attempt the climb.
+
+>[!question] Ok, you made it to the end, and now you are saying: 
+>"But like I want to see this done for real...."
 >Ah... go checkout a short [[Climbing Grades Case Study|case study]] I did for two prevalent climbs on Mt. Blue Sky.
+
+>[!seealso] Further Reading
+>I just took a class on measure theory that made sense of how random variables can be thought of as "measurable functions". Going deep on the theory can help take the mysticism out of randomness. This is definitely too much for this discussion, but if you are interested I followed [Measure Theory, Probability, and Stochastic Processes by Le Gall](https://books.google.com/books/about/Measure_Theory_Probability_and_Stochasti.html?id=Ba2YEAAAQBAJ&source=kp_book_description)
+>If that is a bit too much too fast then you also could read [The Simple and Infinite Joy ofMathematical Statistics by Corcoran](https://books.google.com/books/about/The_Simple_and_Infinite_Joy_of_Mathemati.html?id=uy6DzwEACAAJ) which I have read twice! This definitely helps explain enough without getting too into the proof-y details.

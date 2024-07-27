@@ -9,7 +9,7 @@ While the climbs are adjacent to each other on the Dali wall, they pose differen
 
   
 >[!example]
->![[public/fig/CBS.jpeg]]
+>![[fig/CBS.jpeg]]
 >Elite climber Jess Walker climbing Clear Blue Skies
 
 At the time of writing, it is more common for ascensionists to grade CBS as "V11" and NMGG as "V12". From anecdotal reports, both take a similar amount of effort and time to complete. Which may indicate the climbs are comparable. It appears that CBS suits a narrower range of morphologies and competencies, and NMGG is more amicable to a broader range of morphologies and competencies. The models described above are applied to analyze these two climbs.
@@ -24,39 +24,33 @@ This involved going through the publicly available web interface and isolating t
 The integer reported grade is digested into the algorithms as that integer plus 0.5 to place it directly between the grade above and below. For instance, a "V11" would be interpreted as a 11.5. The hard and soft identifiers modify the grade by 0.25, so a "hard V11" would be considered 11.75. A "soft V11" would be 11.25.
 ## Estimating Grade Distributions
 
-We assume the form of each distribution, and then this becomes a parameter estimation problem. This was done through third party software from [scipy](https://scipy.org/) and [sklearn](https://scikit-learn.org/). Both are python packages widely used for machine learning and statistics. The Normal and Gamma distribution's parameters are estimated using maximum likelihood estimation (MLE). For the Gaussian Mixtures [expectation maximization](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture.fit). It is worth noting that parameter estimation generally is a nonconvex nonlinear optimization problem and thus there are few guarantees that we estimate the parameters well. In practice, parameter estimation is necessary, and thus we must try. The techniques used here are standard and used in the sciences widely.  
+We assume the form of each distribution, and then this becomes a parameter estimation problem. This was done through third party software from [scipy](https://scipy.org/) and [sklearn](https://scikit-learn.org/). Both are python packages widely used for machine learning and statistics. The Normal and Gamma distribution's parameters are estimated using maximum likelihood estimation (MLE). For the Gaussian Mixtures [expectation maximization](https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html#sklearn.mixture.GaussianMixture.fit). It is worth noting that parameter estimation generally is a non-convex nonlinear optimization problem and thus there are few guarantees that we estimate the parameters well. In practice, parameter estimation is necessary, and thus we must try. The techniques used here are standard and used in the sciences widely.  
 ### Assessing the Distributions
 
 You might ask, "How good of a job am I doing?" I want to know that as well. Good for us mathematicians have developed ways for evaluate how well a distribution matches a sample. 
 
 The first thing to do is a qualitative analysis, look at the histogram of the debiased grades with a fit distribution superimposed. This can give a valuable qualitative picture of if the fit distribution "looks right". 
 
-You should feel unsatisfied with that step, and should ask, "how should the fit distribution be evaluated quantitatively?" There are many metrics one could consider, but one with a particularly interesting interpretation is the *Kullback-Leibler divergence* (KL divergence) defined below. Mathematically, this divergence is rich in meaning, but in this application, it can be interpreted at the "expected surprise" by choosing the fit distribution rather than some true distribution. The KL divergence measures how well the choice of model describes the true behavior of the data.
+You should feel unsatisfied with that step, and should ask, "how should the fit distribution be evaluated quantitatively?" There are many metrics one could consider, but one with a particularly interesting interpretation is the *Kullback-Leibler divergence* ([KL divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)) defined below. Mathematically, this divergence is rich in meaning, but in this application, it can be interpreted at the "expected surprise" by choosing the fit distribution rather than some true distribution. The KL divergence measures how well the choice of model describes the true behavior of the data.
 
+$$D_{KL}(p || q) = \int_{-\infty}^\infty p(x) \log\left(\frac{p(x)} {q(x)}\right)dx$$
 
-$$\begin{align*}
-D_{KL}(p || f) &= \int_{-\infty}^\infty p(x) \log\left(\frac{p(x)} {f(x)}\right)dx \\
-p & \text{ is the pdf of the fit model}\\
-f & \text{ is the pdf of the true distribution}
-\end{align*}$$
+where  $p$ is the pdf of the fit model, and  $q$  is the pdf of the true distribution
 
 If the KL divergence is small, the fit distribution is, in some sense, equivalent to the true distribution. If the KL divergence is large, the fit distribution does not represent the true distribution. Comparing KL divergences between models can help determine which model better fits the data, i.e., the model with the smaller KL divergence.
 
 An important caveat to note, is that the KL divergence cannot be computed exactly for any of the candidate models because the exact distribution is not known. Instead the KL divergence is estimated by using the CDF of the fit distribution to that of the empirical CDF of the data, see this [paper](https://www.scirp.org/reference/referencespapers?referenceid=2697925) for more details. This is shown asymptotically converges to the true KL divergence, so as the size of the data set increases, so does the accuracy of the estimate.
 
-  
+$$\hat{D}_{KL}(p || f) = \frac{1}{n} \sum_{i=1}^n \log(\dfrac{\delta P_n}{\delta Q_n})$$
 
-$$\begin{align*}
-	\hat{D}_{KL}(p || f) &= \frac{1}{n} \sum_{i=1}^n \log(\dfrac{\delta P_n}{\delta Q_n})\\
-	\delta P_n & \text{ is the difference in the fit distributions cdf from the ordered data $i-1$ to $i$}\\
-	\delta Q_n & \text{ is the difference in the empircal cdf from the ordered data $i-1$ to $i$}\\
-\end{align*}$$
-
+where $\delta P_n$  is the difference in the fit distributions cumulative distribution function (CDF) from the ordered data $i-1$ to $i$, and $\delta Q_n$ is the difference in the empirical CDF from the ordered data $i-1$ to $i$.
   
->[!example]
->![[public/fig/cbsFit.png]]
+>[!example] Clear Blue Skies
+>![[fig/cbsFit.png]]
 >For all of the available debiased CBS's grades, I fit the Uniform, Gamma and Normal distributions to the data, as well as a Gaussian Mixture, and KDE. We see that the Gaussian Mixture or KDE performs best.
->![[public/fig/nmggFit.png]]
+
+>[!example] No More Greener Grasses
+>![[fig/nmggFit.png]]
 >For all of the available debiased NMGG's grades, I fit the Uniform, Gamma and Normal distributions to the data, as well as a Gaussian Mixture, and KDE. We see that the Gaussian Mixture or KDE performs best.
 
 The KL divergence varies depending on which distribution is used. While it may be tempting to blindly select the Gaussian Mixture for both climbs, because it does minimize the KL divergence for both out of the distributions tested. Qualitatively, CBS appears to have two modes (peaks) while NMGG visually has one mode with a single outlier. Thus the Gaussian Mixture and the KDE could be overfitting the data in the case of NMGG and likely selecting the Gamma or Normal distribution is more prudent.
@@ -74,25 +68,25 @@ The fit distributions form a sequence $\{X_n\}_{i=1}^n$, and if the distribution
 
 In the histograms in the section above, both CBS and NMGG have not converged to a single grade as seen clearly in the data. But what about the fit distributions? Below are plots of how the KDE changes as more ascents occur over time. The ascents were ordered in time, and then a distribution was fit to a subset of the data, starting with the first ten ascents, then adding one ascent and then another and so on. The KL divergence between fit distributions is computed to see if the sequence is in fact converging. \footnote{For those who don't commonly see logarithms, recall as $\log(D_{KL})$ approaches $-\infty$, $D_{KL}$ approaches 0.}.
 
->[!eexample] 
->![[public/fig/cbsConverge.png]]
+>[!example] Clear Blue Skies
+>![[fig/cbsConverge.png]]
 >On the left a surface of fit distributions, and on the right is the pairwise KL divergence between the adjacent fit distributions.
 
->[!eexample] 
->![[public/fig/nmggConverge.png]]
+>[!example] No More Greener Grasses
+>![[fig/nmggConverge.png]]
 >On the left a surface of fit distributions, and on the right is the pairwise KL divergence between the adjacent fit distributions.}
 
 A Gaussian Mixture model was selected for CBS, and a Normal distribution was used for NMGG. Setting $\epsilon = 10^{-8}$, both sequences can be considered to have converged. This demonstrates that the climbs are in fact generating a grade that is random rather than a fixed number.
  
-# Conclusion
+# How Hard are These Two Climbs?
 
 What you gain from using this model over the conventional consensus or personal integer grade? For one, these fit models can be interpreted into actionable information. If one were to integrate under the curve from 0 to 11.75 for the Gaussian Mixture fit to the ascents of CBS, they would get $\approx 54\%$. This represents the probability that someone would experience a "hard V11" or less. One could then use this information to prepare themselves for the likelihood that they might experience a "V11" but there is almost an equal probability that they will experience "V12". Using the same process for the fit Gamma distribution for NMGG, one can only expect a $\approx2\%$ chance that they will experience a "hard V11" or less.
 
->[!example]
->![[public/fig/cbsInt.png]]
->![[public/fig/nmggInt.png]]
->Above is a visualization of computing the probability of expierencing at most a "hard V11" on both CBS and NMGG. 
+>[!example] Clear Blue Skies
+>![[fig/cbsInt.png]]
+>We see that the probability that  a person would experience "V11" on CBS, is actually quite high. This means that without knowing anything about a particular climber, we can say that in general one can probably expect to feel like CBS is a *hard* "V11" or easier. 
 
-Also, this interpretation of grades can better inform how grades are philosophically considered. Viewing grades as a random variable that each climber samples from when they complete an ascent adds an interesting perspective on grades in general. This injects a certain amount of grace when hearing what others think about a particular climb. Because it is mathematically impossible that one will have the same experience as another.
+>[!example] No More Greener Grasses
+>![[fig/nmggInt.png]]
+>In contrast, the data shows that most people think that NMGG is "V12" or harder.
 
-Hopefully climbers will think critically about *bias*. As discussed earlier *bias* is not easily estimated and the assumptions made to do so are inherently flawed. Hopefully this motivates climbers to be thoughtful when reporting their grade. Choose to report not just the grade that feels good or the one that others take, but really what one thinks they experienced. Conscious *bias* is dishonest and does not help others in estimating the difficulty they will experience when they attempt the climb.
