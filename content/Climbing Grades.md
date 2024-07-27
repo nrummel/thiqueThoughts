@@ -18,13 +18,13 @@ Rock climbing grades pose a unique challenge because measurability is limited. A
 The current relationship many climbers have with quantifying difficulty is problematic in my opinion. Many assert that grades are useless. This is a naive and displays a lack of intellectual engagement. Grades are useful. Sport necessitates comparison. It allows one to compare between themselves and others, and to compare between their current and past self. That said, grades also are limited, and a single number cannot encapsulate all the complexity of a climb. So let's try to better understand grades and how we can them gain useful information.  
 # What is a Grade?
 
-Let's try to better understand grades, by thinking about them as a scientist would. What is a grade? I like to think of a grade like a measurement. Doing a climb is an experience, and at the end of the experience (upon completion of a climb) the climber can reflect and label what they just did. This is analogous to a scientist using an instrument to measure some physical phenomena. The underlying system has some features, the instrument takes those feature and produces a numeric output. We can use math to describe this. The instrument can be thought of as a function and the physical features are inputs. The measurement is numeric value is evaluating the function at these particular inputs. In the real world, measurements have error. This can come from a variety of sources. A simple example is that of precision. If the ruler only has marks for millimeters, then it is impossible to measure more accurately that up to millimeters. Thus we have uncertainty of $\approx \frac{1}{2}$mm on each measurement. We can account for this by saying that the measurement has some random error. 
+Let's try to better understand grades, by thinking about them as a scientist would. What is a grade? I like to think of a grade like a measurement or a function. Doing a climb is an experience, and at the end of the experience (upon completion of a climb) the climber can reflect and label what they just did. This is analogous to a scientist using an instrument to measure some physical phenomena. The underlying system has some features, the instrument takes those feature and produces a numeric output. We can use math to describe this. The instrument can be thought of as a function and the physical features are inputs. The measurement is numeric value is evaluating the function at these particular inputs. In the real world, measurements have error. This can come from a variety of sources. A simple example is that of precision. If the ruler only has marks for millimeters, then it is impossible to measure more accurately that up to millimeters. Thus we have uncertainty of $\approx \frac{1}{2}$mm on each measurement. We can account for this by saying that the measurement has some random error. 
 
 >[!question] 
 >You are probably thinking: "This is all nice and good, but I thought we were talking about grades?" 
 
 I know we are getting there I promise. Let's root ourself in what we came here to think about. For now I think it is worth thinking about the function  $f$ that represents the process of experiencing a climb to have multiple inputs. 
- 
+## What Contributes to a Grade 
 For example, climbers will often reference elements like, physical strength, flexibility, morphology, and technique. All could come into play on a climb, and depending on an individual's propensities, one climb may feel easier or harder. That said, after becoming proficient in the aspects of climbing, many believe that a climb that derives its difficulty from demanding that a climber use, with precision, very subtle features with their feet, can be "the same grade" as a climb that derives its difficulty from demanding that a climber be able to move their body towards the end of a climb using only their hands.
 
 Another complicating factor to grades is that of conditions. Physically, holds may be more easy to use depending on the temperature and humidity due to changes in how skin, rubber deform as well as how the friction between surfaces changes. Also, wind can help keep skin and rock dry. This leads us to believe that climbers can experience climbs' difficulty not only due to individual ability and morphology, but also because of environmental factors.
@@ -32,7 +32,7 @@ Another complicating factor to grades is that of conditions. Physically, holds m
 We also should account for is lack of precision in a climbers ability to accurately asses difficulty. Just like some rulers only have lines for centimeters and others measure down to millimeters, some individuals are better at assessing difficulty than others. The accuracy of a particular measurement can change based off wether someone has experience at that grade. Also, many say that it is difficult to measure a grade that is too far away from their current *level*. Grades that are *easy* for an individual may be hard to distinguish between. On the other hand, some setters and well seasoned climbers appear to have the ability to accurately assess difficulty far above and below their *level*.
 
 Furthermore, depending on an individuals background and internal motivations, they may feel inclined to report not the real grade but instead choose to change the grade they tell others (and even themselves). This type of error is fundamentally different than measurement error. I like to call this bias. I think it is worth being generous towards others with respect to what I may perceive as bias. The reason someone has bias can depend on where they started climbing, their phase of life, and other extenuating factors. This is not to say that we won't account for it in our math, but don't hate on people just because their bias is obvious. If you want discussion on this bias, see [[Climbing Grades Dirty Details#Bias|my longer rant]].
-## Math Time
+# Math Time
 
 Here, I introduce a mathematical framework that extends the familiar climbing grading system, but allows us to ask and answer more nuanced questions about the difficulty of climbs. I considered [[Climbing Grades Dirty Details#A Short Discussion on Modeling|other modeling choices]] At a high level, we model the system of "doing a rock climb" as a function, $f$, that takes the climber $x$, the climb, $y$, and the environment, $\theta$, as inputs, and then this produces a grade, $g$. 
 $$ 
@@ -52,7 +52,7 @@ $$
 \end{align*}
 $$
 Because this data is not easily available for each reported grade on the internet, we assume that the climber and environment factors can vary randomly. Meaning that there is an underlying stochastic component to the system. This also allows us to account for measurement error discussed earlier. This is a common modeling technique when we have modeling error or the system is chaotic, is to model this hard to model dynamics with a stochastic process rather than relying on purely deterministic behavior.
-
+## We Should Use a Stochastic Model
 That's a really long winded way of saying that for the time being, we really don't care what $x$ and $\theta$ are... We assume that climbs will be done in a variety of environmental factors and by a variety of different climbers. Instead we say that each particular reported grade $g_n$ is a realization of random variable $G_y$. This random variable is  function of other random variables
 
 $$
@@ -68,11 +68,18 @@ The change to upper case letters signifies that those are random variables with 
 Notice, that we assume that the climb doesn't change, thus $y$ stays lower case and is not random. Because we assume climbers and the environmental factors can change (they can and do vary), then we expect and do see in the data that climbing grades will vary. 
 This hopefully gives useful and actionable information by capturing most of the behavior of how difficulty is actualized. If we did have more data for a particular climb on multiple ascents, we could incorporate this data through [[Extending Random Climbing Grades|conditional distributions]].
 
+One can visualize continuous random variables through their probability distribution function (when it exists).
+
+>[!example]
+>![[public/fig/dist.png]]
+>Above are candidate distributions for a hypothetical "V5". All have an average grade of "V5", but with different behavior. This allows us to model one "V5" where mostly everyone agrees, but on another "V5" where there is much disagreement.
+## Bias
 To account for *bias*, I wrote a (simple perhaps naive) [[Debiasing Algo.png|algorithm]] to estimate the expected bias for a particular climber $\mathbb{E}[b(X)]$. This allows then estimate the *experienced grade*. You can think of this as Bayesian approach. We are conditioning on the expected bias. Thus we can obtained the "debiased" grade:
 $$ 
 g_n - \mathbb{E}[b(X)] \approx d_n
 $$
-Now given a sample $\{g_n\}_{n=1}^N$ of these debiased grades we can estimate a distribution for the debiased grade of a particular climb $D_y$. 
+Now given a sample $\{g_n\}_{n=1}^N$ of these debiased grades we can estimate a distribution for the debiased grade of a particular climb $D_y$. You can read more about how this is done [[Climbing Grades Dirty Details#Bias|here]].
+# Takeaways
 
 >[!question]
 >NOW you are probably asking, "Ok,ok... but Mr. Thique, why? Like who cares, I get you had a good time thinking about this and you sound a lot like a guy who spend too much time on his computer. That's nice, but like does this help climbers?"
