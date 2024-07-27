@@ -9,7 +9,7 @@ While the climbs are adjacent to each other on the Dali wall, they pose differen
 
   
 >[!example]
->![[CBS.jpeg]]
+>![[public/fig/CBS.jpeg]]
 >Elite climber Jess Walker climbing Clear Blue Skies
 
 At the time of writing, it is more common for ascensionists to grade CBS as "V11" and NMGG as "V12". From anecdotal reports, both take a similar amount of effort and time to complete. Which may indicate the climbs are comparable. It appears that CBS suits a narrower range of morphologies and competencies, and NMGG is more amicable to a broader range of morphologies and competencies. The models described above are applied to analyze these two climbs.
@@ -54,9 +54,9 @@ $$\begin{align*}
 
   
 >[!example]
->![[cbsFit.png]]
+>![[public/fig/cbsFit.png]]
 >For all of the available debiased CBS's grades, I fit the Uniform, Gamma and Normal distributions to the data, as well as a Gaussian Mixture, and KDE. We see that the Gaussian Mixture or KDE performs best.
->![[nmggFit.png]]
+>![[public/fig/nmggFit.png]]
 >For all of the available debiased NMGG's grades, I fit the Uniform, Gamma and Normal distributions to the data, as well as a Gaussian Mixture, and KDE. We see that the Gaussian Mixture or KDE performs best.
 
 The KL divergence varies depending on which distribution is used. While it may be tempting to blindly select the Gaussian Mixture for both climbs, because it does minimize the KL divergence for both out of the distributions tested. Qualitatively, CBS appears to have two modes (peaks) while NMGG visually has one mode with a single outlier. Thus the Gaussian Mixture and the KDE could be overfitting the data in the case of NMGG and likely selecting the Gamma or Normal distribution is more prudent.
@@ -75,11 +75,11 @@ The fit distributions form a sequence $\{X_n\}_{i=1}^n$, and if the distribution
 In the histograms in the section above, both CBS and NMGG have not converged to a single grade as seen clearly in the data. But what about the fit distributions? Below are plots of how the KDE changes as more ascents occur over time. The ascents were ordered in time, and then a distribution was fit to a subset of the data, starting with the first ten ascents, then adding one ascent and then another and so on. The KL divergence between fit distributions is computed to see if the sequence is in fact converging. \footnote{For those who don't commonly see logarithms, recall as $\log(D_{KL})$ approaches $-\infty$, $D_{KL}$ approaches 0.}.
 
 >[!eexample] 
->![[cbsConverge.png]]
+>![[public/fig/cbsConverge.png]]
 >On the left a surface of fit distributions, and on the right is the pairwise KL divergence between the adjacent fit distributions.
 
 >[!eexample] 
->![[nmggConverge.png]]
+>![[public/fig/nmggConverge.png]]
 >On the left a surface of fit distributions, and on the right is the pairwise KL divergence between the adjacent fit distributions.}
 
 A Gaussian Mixture model was selected for CBS, and a Normal distribution was used for NMGG. Setting $\epsilon = 10^{-8}$, both sequences can be considered to have converged. This demonstrates that the climbs are in fact generating a grade that is random rather than a fixed number.
@@ -89,8 +89,8 @@ A Gaussian Mixture model was selected for CBS, and a Normal distribution was use
 What you gain from using this model over the conventional consensus or personal integer grade? For one, these fit models can be interpreted into actionable information. If one were to integrate under the curve from 0 to 11.75 for the Gaussian Mixture fit to the ascents of CBS, they would get $\approx 54\%$. This represents the probability that someone would experience a "hard V11" or less. One could then use this information to prepare themselves for the likelihood that they might experience a "V11" but there is almost an equal probability that they will experience "V12". Using the same process for the fit Gamma distribution for NMGG, one can only expect a $\approx2\%$ chance that they will experience a "hard V11" or less.
 
 >[!example]
->![[cbsInt.png]]
->![[nmggInt.png]]
+>![[public/fig/cbsInt.png]]
+>![[public/fig/nmggInt.png]]
 >Above is a visualization of computing the probability of expierencing at most a "hard V11" on both CBS and NMGG. 
 
 Also, this interpretation of grades can better inform how grades are philosophically considered. Viewing grades as a random variable that each climber samples from when they complete an ascent adds an interesting perspective on grades in general. This injects a certain amount of grace when hearing what others think about a particular climb. Because it is mathematically impossible that one will have the same experience as another.
