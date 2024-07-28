@@ -43,9 +43,9 @@ If the KL divergence is small, the fit distribution is, in some sense, equivalen
 
 An important caveat to note is that the KL divergence cannot be computed exactly for any of the candidate models because the exact distribution is not known. Instead the KL divergence is estimated by using the cumulative distribution function (CDF) of the fit distribution and the empirical CDF of the data, see this [paper](https://www.scirp.org/reference/referencespapers?referenceid=2697925) for more details. This is shown to asymptotically converge to the true KL divergence, so as the size of the data set increases, so does the accuracy of the estimate.
 
-$$\hat{D}_{KL}(p || f) = \frac{1}{J} \sum_{j=1}^J \log(\dfrac{\delta P_j}{\delta Q_j})$$
+$$\hat{D}_{KL}(p || f) = \frac{1}{J} \sum_{n=2}^N \log(\dfrac{\delta P_n}{\delta Q_n})$$
 
-where $\delta P_j$  is the difference in the fit distribution's CDF from the ordered data $j-1$ to $j$, and $\delta Q_j$ is the difference in the empirical CDF from the ordered data $j-1$ to $j$.
+where $\delta P_n$  is the difference in the fit distribution's CDF from the ordered data $n-1$ to $n$, and $\delta Q_n$ is the difference in the empirical CDF from the ordered data $n-1$ to $n$.
   
 >[!example] Clear Blue Skies
 >![[fig/cbsFit.png]]
@@ -65,7 +65,7 @@ Oftentimes, climbers will say that the grade has come to a consensus. This means
 
 Mathematically, this hypothesis can be tested to see what grades actually converge to. If in fact a climbing grade converges to a single number as the number of ascents increased, the fit distribution eventually becomes more and more sharply peaked around a specific number. This is called a Dirac function. If on the other hand the grade converges to a distribution then there is proof that a grade is not a single number, but instead a random variable.
 
-The fit distributions form a sequence $\{d_n\}_{n=1}^N$, and if the distribution is converging to a single number then this would be shown by the limit converging $\lim_{n \rightarrow \infty} d_n = C$ where $C$ is a constant. Algorithmically, convergence can be met when consecutive elements in the sequence get close to each other $D_{KL}(d_n - d_{n-1}) \leq \epsilon$. where $\epsilon$ is a small number corresponding to an error tolerance. In practice, this means that after a certain number of ascents if the $D_{KL}$ is small enough, then $d_n$ can be used as a proxy to the data. In essence, now the distribution of the grade is known, and it is the same as $d_N$.
+The fit distributions form a sequence $\{F_{d_n}\}_{n=1}^N$, and if the distribution is converging to a single number then this would be shown by the limit converging $\lim_{n \rightarrow \infty} F_{d_n} = C$ where $C$ is a constant. Algorithmically, convergence can be met when consecutive elements in the sequence get close to each other $D_{KL}(F_{d_n} - d_{n-1}) \leq \epsilon$. where $\epsilon$ is a small number corresponding to an error tolerance. In practice, this means that after a certain number of ascents $n^*$ if the $D_{KL}$ is small enough, then $F_{d_{n^*}}$ can be used as a proxy to the data. In essence, now the distribution of the grade is known, and it is the same as $F_{d_{n^*}}$.
 
 In the histograms in the section above, both CBS and NMGG have not converged to a single grade as seen clearly in the data. But what about the fit distributions? Below are plots of how the KDE changes as more ascents occur over time. The ascents were ordered in time, and then a distribution was fit to a subset of the data, starting with the first ten ascents, then adding one ascent and then another and so on. The KL divergence between fit distributions is computed to see if the sequence is in fact converging. For those who don't commonly see logarithms, recall as $\log(D_{KL})$ approaches $-\infty$, $D_{KL}$ approaches 0.
 
