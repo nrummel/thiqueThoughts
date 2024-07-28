@@ -112,3 +112,4 @@ Hopefully climbers will think critically about *bias*. As discussed earlier, *bi
 > - Dr. Stephen Becker
 > - Paige Witter
 > - Sam Struthers
+> - Jeremy Abraham

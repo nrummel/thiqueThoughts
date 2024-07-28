@@ -98,3 +98,4 @@ What do you gain from using this model over the conventional consensus or person
 > - Dr. Stephen Becker
 > - Paige Witter
 > - Sam Struthers
+> - Jeremy Abraham
