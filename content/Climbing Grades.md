@@ -103,3 +103,12 @@ Hopefully climbers will think critically about *bias*. As discussed earlier, *bi
 >I just took a class on measure theory that made sense of how random variables can be thought of as "measurable functions". Going deep on the theory can help take the mysticism out of randomness. This is definitely too much for this discussion, but if you are interested I followed [Measure Theory, Probability, and Stochastic Processes by Le Gall](https://books.google.com/books/about/Measure_Theory_Probability_and_Stochasti.html?id=Ba2YEAAAQBAJ&source=kp_book_description).
 >
 >If that is a bit too much too fast then you also could read [The Simple and Infinite Joy ofMathematical Statistics by Corcoran](https://books.google.com/books/about/The_Simple_and_Infinite_Joy_of_Mathemati.html?id=uy6DzwEACAAJ) which I have read twice! This definitely helps explain enough without getting too into the proof-y details.
+
+>[!tip] Acknowledgements
+> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: 
+> - Will Anglin
+> - Dr. Dale Jennings
+> - Dr. Jem Corcoran 
+> - Dr. Stephen Becker
+> - Paige Witter
+> - Sam Struthers
