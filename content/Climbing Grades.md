@@ -5,7 +5,7 @@ tags:
 ---
 Discussions around grades circulate in rock climbing all the time. The sport is multifaceted, and each climb poses a variety of challenges. Historically, climbers have given each route or boulder a grade, a single number. Grades allow climbers to understand the level of challenge they can expect. Also, it allows for comparison between ascents, and ideally one climb on a continent across the ocean is comparable to one at the local crag or gym.
 
-Comparison of achievement is a fundamental aspect of sport, and for some sports the measurability of the activity allows for an objective view. For instance, in track and field, barring a large wind, times are comparable even if one race took place on the other side of the planet from the other. Other sports share the difficulty in quantifying excellence. Is a kickflip more impressive than a three-sixty on a skateboard? Does a double back tuck take more skill and strength than a front layout with a full twist for gymnasts? This ambiguity is addressed in a variety of ways. For instance in gymnastics and ice skating skills are given a score prior to the competition, and a panel of judges grades each performance based on a rubric with another score for style and execution. In other sports like surfing, skateboarding and freestyle skiing/snowboarding a more qualitative approach has been used. Judges are allowed to scale points based on prior experience and general principles laid out by the [skateboarding community.](https://www.skateboarding.worldskate.org/news/1477-understanding-skateboarding-judging.html)
+	Comparison of achievement is a fundamental aspect of sport, and for some sports the measurability of the activity allows for an objective view. For instance, in track and field, barring a large wind, times are comparable even if one race took place on the other side of the planet from the other. Other sports share the difficulty in quantifying excellence. Is a kickflip more impressive than a three-sixty on a skateboard? Does a double back tuck take more skill and strength than a front layout with a full twist for gymnasts? This ambiguity is addressed in a variety of ways. For instance in gymnastics and ice skating skills are given a score prior to the competition, and a panel of judges grades each performance based on a rubric with another score for style and execution. In other sports like surfing, skateboarding and freestyle skiing/snowboarding a more qualitative approach has been used. Judges are allowed to scale points based on prior experience and general principles laid out by the [skateboarding community.](https://www.skateboarding.worldskate.org/news/1477-understanding-skateboarding-judging.html)
 
 No system is without its flaws, and many within these sports have qualms with their current system. For instance, [bias among ice-skating judges](https://libjournals.unca.edu/OJS/index.php/mas/article/view/23) has been reported, and while steps have been taken to address the problem, many believe it is still present. While in surfing, many factors are supposed to contribute to each athlete's score, but it appears that some specific attributes contribute far more than others, which [may or may not be fair](https://www.scielo.br/j/rbcdh/a/sBhkpSkgv3FD6YjkFQTxk7j/?lang=en).
 
@@ -105,11 +105,4 @@ My hope is that this motivates climbers to discuss their grade opinions differen
 >If that is a bit too much too fast then you also could read [The Simple and Infinite Joy ofMathematical Statistics by Corcoran](https://books.google.com/books/about/The_Simple_and_Infinite_Joy_of_Mathemati.html?id=uy6DzwEACAAJ) which I have read twice! This definitely helps explain enough without getting too into the proof-y details.
 
 >[!tip] Acknowledgements
-> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: 
-> - Will Anglin
-> - Dr. Dale Jennings
-> - Dr. Jem Corcoran 
-> - Dr. Stephen Becker
-> - Paige Witter
-> - Sam Struthers
-> - Jeremy Abraham
+> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: Will Anglin, Dr. Dale Jennings, Dr. Jem Corcoran , Dr. Stephen Becker, Paige Witter, Sam Struthers, Ethan Rummel, and Jeremy Abraham

@@ -91,11 +91,4 @@ What do you gain from using this model over the conventional consensus or person
 >In contrast, the data shows that most people think that NMGG is "V12" or harder.
 
 >[!tip] Acknowledgements
-> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: 
-> - Will Anglin
-> - Dr. Dale Jennings
-> - Dr. Jem Corcoran 
-> - Dr. Stephen Becker
-> - Paige Witter
-> - Sam Struthers
-> - Jeremy Abraham
+> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: Will Anglin, Dr. Dale Jennings, Dr. Jem Corcoran , Dr. Stephen Becker, Paige Witter, Sam Struthers, Ethan Rummel, and Jeremy Abraham
