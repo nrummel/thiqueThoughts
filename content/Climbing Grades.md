@@ -63,7 +63,7 @@ $$
 
 The change to upper case letters signifies that those are random variables with some underlying distribution. Thinking of them this way allow us to formally (mathematically) push a bunch of stuff we cannot measure under the rug. 
 
-Notice, that we assume that the climb doesn't change, thus $y$ stays lower case and is not random. The index $n$ specifies a particular individual's reported grade for a particular climb. This is nice because will have a many samples $\{g_n\}_{n=1}^N$. Because we assume climbers and the environmental factors can change (they can and do vary), then we expect and do see in the data that climbing grades will vary. 
+Notice, that we assume that the climb doesn't change, thus $y$ stays lower case and is not random. The index $n$ specifies a particular individual's reported grade for a particular climb. This is nice because will have a many samples $\{g_n\}_{n=1}^N$. Because we assume climbers and the environmental factors can change (they can and do vary), then we expect and do see in the data that climbing grades vary. 
 
 This hopefully gives useful and actionable information by capturing most of the behavior of how difficulty is actualized. If we did have more data for a particular climb on multiple ascents, we could incorporate this data through [[Extending Random Climbing Grades|conditional distributions]].
 
