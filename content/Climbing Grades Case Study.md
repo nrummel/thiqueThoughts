@@ -1,5 +1,5 @@
 ---
-title: Two Boulders on Mt. Blue Sky
+title: Two Boulders on Mt. Blue Sky 🗻
 draft:
 ---
 

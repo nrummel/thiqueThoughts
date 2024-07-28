@@ -53,7 +53,7 @@ $$
     \theta &=  \{\text{Temperature, Humidity, Cloud Cover, ect.}\}
 \end{align*}
 $$
-Because this data is not easily available for each reported grade on the internet, we assume that the climber and environment factors can vary randomly. This means that there is an underlying stochastic component to the system. This also allows us to account for measurement error as discussed earlier. A common modeling technique when  modeling error is present or the system is chaotic; modeling these hard to model dynamics with a stochastic process rather than relying on purely deterministic behavior.
+Because this data is not easily available for each reported grade on the internet, we assume that the climber and environment factors can vary randomly. This means that there is an underlying stochastic component to the system. This also allows us to account for measurement error as discussed earlier. A common modeling technique when  modeling error is present, or the system is chaotic; modeling these hard to model dynamics with a stochastic process rather than relying on purely deterministic behavior.
 ## We Should Use a Stochastic Model
 That's a really long-winded way of saying that for the time being, we really don't care what $x$ and $\theta$ are... We assume that climbs will be done in a variety of environmental factors and by a variety of different climbers. Instead, we say that each particular reported grade $g_n$ is a realization of random variable $G_y$. This random variable is a function of other random variables:
 
@@ -61,11 +61,11 @@ $$
 \underbrace{G_y}_{\text{reported grade}} = \underbrace{h(X,y,\Theta)}_\text{expierenced grade} + \underbrace{b(X)}_{\text{bias}}
 $$
 
-The change to upper case letters signifies that those are random variables with some underlying distribution. Thinking of them this way allow us to formally (mathematically) push a bunch of stuff we cannot measure under the rug. 
+The change to upper case letters signifies that those are random variables with some underlying distribution. Thinking of them this way allows us to formally (mathematically) push a bunch of stuff we cannot measure under the rug. 
 
-Notice, that we assume that the climb doesn't change, thus $y$ stays lower case and is not random. The index $n$ specifies a particular individual's reported grade for a particular climb. This is nice because will have a many samples $\{g_n\}_{n=1}^N$. Because we assume climbers and the environmental factors can change (they can and do vary), then we expect and do see in the data that climbing grades vary. 
+Notice, that we assume that the climb doesn't change, thus $y$ stays lower case and is not random. The index $n$ specifies a particular individual's reported grade for a particular climb. This is nice because will have a many samples $\{g_n\}_{n=1}^N$. 
 
-This hopefully gives useful and actionable information by capturing most of the behavior of how difficulty is actualized. If we did have more data for a particular climb on multiple ascents, we could incorporate this data through [[Extending Random Climbing Grades|conditional distributions]].
+We assume climbers and environmental factors to change, thus we expect climbing grades to vary. This hopefully gives useful and actionable information by capturing most of the behavior of how difficulty is actualized. If we did have more data for a particular climb on multiple ascents, we could incorporate this data through [[Climbing Grades Dirty Details#Extending to Conditional Distributions|conditional distributions]].
 
 One can visualize continuous random variables through their probability distribution function (when it exists).
 
@@ -77,7 +77,7 @@ To account for *bias*, I wrote a (simple, perhaps naive) [[Debiasing Algo.png|al
 $$ 
 g_n - \mathbb{E}[b(X)] \approx d_n
 $$
-Now given a sample $\{g_n\}_{n=1}^N$ of these debiased grades we can estimate a distribution for the debiased grade of a particular climb $D_y$. You can read more about how this is done [[Climbing Grades Dirty Details#Bias|here]].
+Now given a sample $\{g_n\}_{n=1}^N$ of these debiased grades we can estimate a distribution for the debiased grade of a particular climb $D_y$. You can [[Climbing Grades Dirty Details#Bias|read more]] about how I think about bias, and how we leverage it.
 # Takeaways
 
 >[!question] Now, you are probably asking:
