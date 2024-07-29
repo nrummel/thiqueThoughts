@@ -81,7 +81,7 @@ Now given a sample $\{g_n\}_{n=1}^N$ of these debiased grades we can estimate a 
 # Takeaways
 
 >[!question] Now, you are probably asking:
->"Ok,ok... but Mr. Thique, why? Like who cares, I get you had a good time thinking about this and you sound a lot like a guy who spends too much time on his computer. That's nice, but like does this help climbers?"
+>"Ok,ok... but Mr. Thique, why? Like who cares, I get you had a good time thinking about this, and you sound a lot like a guy who spends too much time on his computer. That's nice, but like does this help climbers?"
 
 Yes! This allows us to leverage the data we have to give us actionable information. We can better answer questions like: 
 - *How hard is that climb?* Now, we can compute the probability that YOU will think a climb is a certain grade. 
