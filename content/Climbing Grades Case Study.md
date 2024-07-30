@@ -95,4 +95,4 @@ To me this is slightly surprising! I definitely think that CBS feels more challe
 Regardless, the exercise of diving deep and seeing what story the available data tells was insightful (and I had a good time). I have done more work with this statistical framework that hopefully will improve the analysis, but polished write ups are not ready to share at the moment. Even if there are obvious limitations in this particular approach, I hope introducing others to think about grades in this way will spark good conversations. I would encourage the reader to see these other qualitative [[Climbing Grades#Takeaways|takeaways]] as well. 
 
 >[!tip] Acknowledgements
-> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: Will Anglin, Dr. Dale Jennings, Dr. Jem Corcoran , Dr. Stephen Becker, Paige Witter, Sam Struthers, Ethan Rummel, and Jeremy Abraham
+> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: Will Anglin, Carlos Tzacz, Dr. Dale Jennings, Dr. Jem Corcoran , Dr. Stephen Becker, Paige Witter, Sam Struthers, Ethan Rummel, and Jeremy Abraham

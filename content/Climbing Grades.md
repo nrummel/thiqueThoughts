@@ -105,4 +105,4 @@ My hope is that this motivates climbers to discuss their grade opinions differen
 >If that is a bit too much too fast then you also could read [The Simple and Infinite Joy ofMathematical Statistics by Corcoran](https://books.google.com/books/about/The_Simple_and_Infinite_Joy_of_Mathemati.html?id=uy6DzwEACAAJ) which I have read twice! This definitely helps explain enough without getting too into the proof-y details.
 
 >[!tip] Acknowledgements
-> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: Will Anglin, Dr. Dale Jennings, Dr. Jem Corcoran , Dr. Stephen Becker, Paige Witter, Sam Struthers, Ethan Rummel, and Jeremy Abraham
+> This is not just my brain child 🧠👶. Thoughtful conversations, edits and ideas were contributed by: Will Anglin, Carlos Tzacz, Dr. Dale Jennings, Dr. Jem Corcoran , Dr. Stephen Becker, Paige Witter, Sam Struthers, Ethan Rummel, and Jeremy Abraham
