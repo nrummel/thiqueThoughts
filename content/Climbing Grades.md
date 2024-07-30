@@ -73,7 +73,7 @@ One can visualize continuous random variables through their probability distribu
 >![[fig/dist.png]]
 >Above are candidate distributions for a hypothetical "V5". All have an average grade of "V5", but with different behavior. This allows us to model one "V5" where mostly everyone agrees (Uniform or Normal), and another "V5" where there is much disagreement (Gamma or Gaussian Mixture Model).
 ## Bias
-To account for *bias*, I wrote a (simple, perhaps naive) [[Debiasing Algo.png|algorithm]] to estimate the expected bias for a particular climber $\mathbb{E}[b(X)]$. This allows us to then estimate the *experienced grade*. You can think of this as a Bayesian approach. We are conditioning on the expected bias. Thus, we can obtain the debiased grade:
+To account for *bias*, I wrote a (simple, perhaps naive) [[Debiasing Algo.png|algorithm]] to estimate the expected bias for a particular climber $\mathbb{E}[b(X)]$. This allows us to then estimate the *experienced grade*. You can think of this as a Bayesian approach (with some handwaving). We are conditioning on the expected bias. Thus, we can obtain the debiased grade:
 $$ 
 g_n - \mathbb{E}[b(X)] \approx d_n
 $$
