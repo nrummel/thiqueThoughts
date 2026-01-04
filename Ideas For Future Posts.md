@@ -1,0 +1,4 @@
+- Why the IFSC Should Fire Matt Groom 
+- Bouldering Tactics on a Budget
+- A case for personal grades (which includes upgrading)
+- What should we expect from Professional Climbers
