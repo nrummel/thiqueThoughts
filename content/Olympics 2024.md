@@ -21,6 +21,9 @@ After seeing who made finals this is my prediction of how the final results shou
 - [Miho Nonaka](https://en.wikipedia.org/wiki/Miho_Nonaka) - Miho was a dominant figure in the World Cups and in the last Olympics taking the silver only to Janja out competing her countrywoman and the legend [Akiyo Noguchi](https://en.wikipedia.org/wiki/Akiyo_Noguchi). I am sad to not see a rematch. Akiyo's career has had its ups and downs with injury. My understanding is at the present she is healthy, but you cannot downplay the cumulative effect that prolonged stretches of injury play on the training of an athlete. 
 - [Laura Rogora](https://en.wikipedia.org/wiki/Laura_Rogora) - Obviously, her story is an unfortunate mismanagement of talent. Laura could have been one of the best climbers of this generation, but her inability to have power is obviously correlated with the lack of muscle necessary to be resilient in the sport.
 ## Results 
+### Boulder
+![[women_final_boulder.png]]
+### Lead
 ![[Women Olympic Final.png]]
 Results courtesy of [ifsc](https://www.ifsc-climbing.org) .
 ## Postgame Analysis

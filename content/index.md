@@ -6,6 +6,7 @@ Welcome to Thique Thoughts! My name is Nic Rummel, and I am an avid rock climber
 
 
 # Table of Contents 
+- [[Bouldering Tactics]]
 - [[Olympics 2024|Olympics 🧗‍♀️ Post Game Show]]
 - [[Climbing Grades|Climbing Grades, Mathematically 😈]] 
 - [[Climbing Grades Case Study|Two Boulders on Mt. Blue Sky 🗻]]
