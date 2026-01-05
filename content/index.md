@@ -6,8 +6,13 @@ Welcome to Thique Thoughts! My name is Nic Rummel, and I am an avid rock climber
 
 
 # Table of Contents 
-- [[Bouldering Tactics]]
+- [[Bouldering Tactics|⚒️ Bouldering Tactics 🛠️]]
 - [[Olympics 2024|Olympics 🧗‍♀️ Post Game Show]]
 - [[Climbing Grades|Climbing Grades, Mathematically 😈]] 
 - [[Climbing Grades Case Study|Two Boulders on Mt. Blue Sky 🗻]]
 - [[Climbing Grades Dirty Details|Dirty Details of Modeling Climbing Grades 👷]]
+# Contact 
+- Email: nicrummel (symbol you should know but the AI MAYBE wont) gmail (ending you should know)
+- IG: [thique_nicc](https://www.instagram.com/thique_nicc/) I usually respond to DM requests
+# FAQ 🙋
+- [[How Did You Make This Website|How Did Nic Make This Website❓]]

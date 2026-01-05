@@ -1,3 +1,8 @@
+---
+title: ⚒️ Bouldering Tactics 🛠️
+date: 01.06.2026
+draft: false
+---
 Nobody asked for this, and as a D tier *elite climber*, you probably should return to scrolling your Instagram.
 ![[Elite_boulders_teir_list.png | center]]
 But I have a lot of thoughts, and I am preparing for my first trip to Ticino 🇨🇭 in January 2026. So I thought I would distill my current lay of the land in the ever evolving and niche world of bouldering tactics.  Before we get started, let me be precise about what I am talking about.
@@ -24,6 +29,7 @@ The following subcategories of tactics are organized into sections (in no partic
 To a lesser extent, *friction* can be affected by temperature. There is some thought that this can be taken literally; i.e. the coefficient of friction between your skin and the rock is worse. What most people mean when they say *friction* in the context of climbing is something less scientific and more perceptual. How do the holds feel? Do they feel sticky or not? This depends on so many factors, one is temperature, but an often neglected cousin is humidity. Independent of external conditions (the temperature and humidity where you are today) are your personal conditions: your level of fatigue, the quality of your skin, and the godforsaken Kroger™ chalk you put on your hands. These personal conditions also affect *friction*. 
 
 Broadly speaking, your perception of how the holds feel is so multifactorial and with good tactics, I truly believe that *good temps* actually span a relatively broad range of external conditions. There is good observational data to support this. See the below plot of the *relative dates* of all V15/8C and harder ascents logged on [8a](https://www.8a.nu/) as of 01.01.2026. The ascents in the Southern Hemisphere are shifted by six months to correct for seasonality.
+
 ![[8cAndHarder.png]]
 
 Of course, hard ascents cluster historically around winter but only **weakly**. Many still occur in the shoulder seasons spring/fall, and some even occur in summer months. Surprisingly, ascents of 8C+/V16 and 9A/V17 show even less of a pattern. This could be due to an insufficient sample size, but I argue that this further strengthens my thesis. Hard ascents can and do still occur in suboptimal temperatures. Thus, it is unreasonable for us to deem them necessary for hard climbing.

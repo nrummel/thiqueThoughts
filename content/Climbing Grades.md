@@ -1,7 +1,7 @@
 ---
 title: Climbing Grades, Mathematically 😈
+date: 30.07.2024
 draft: false
-tags:
 ---
 Discussions around grades circulate in rock climbing all the time. The sport is multifaceted, and each climb poses a variety of challenges. Historically, climbers have given each route or boulder a grade, a single number. Grades allow climbers to understand the level of challenge they can expect. Also, it allows for comparison between ascents, and ideally one climb on a continent across the ocean is comparable to one at the local crag or gym.
 

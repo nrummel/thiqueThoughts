@@ -1,5 +1,7 @@
 ---
 title: Dirty Details of Modeling Climbing Grades 👷
+date: 30.07.2024
+draft: false
 ---
 This is a hodge-podge of ideas that did not make it into the full discussion on [[Climbing Grades]]. I apologize for the lack of organization here.
 # My Frustration with Grades

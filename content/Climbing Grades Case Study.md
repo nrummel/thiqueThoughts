@@ -1,6 +1,7 @@
 ---
-title: Two Boulders on Mt. Blue Sky 🗻
-draft:
+title: Two Boulders on Mt. Blue Sky
+date: 30.07.2024 🗻
+draft: false
 ---
 
 Let's see the math in action! I applied [[Climbing Grades#We Should Use a Stochastic Model|this model]] to a case study by comparing two climbs on Mt. Blue Sky, Colorado: "Clear Blue Skies" and "No More Greener Grasses." There is much debate about whether each climb is "V11" or "V12." These two climbs were chosen because of their proximity which somewhat controls for the effects of environmental factors; on the other hand weather in the alpine is highly variable, so perhaps not. They sit only feet from each other on the same piece of rock. Also, both climbs see many repeats every year, providing the necessary quantity of data. Studying these problems isolates significant factors that impact climbers' reported grades. 

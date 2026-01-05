@@ -1,7 +1,7 @@
 ---
 title: Olympics 🧗‍♀️ Post Game Show
-tags: 
-draft:
+date: 14.08.2024
+draft: false
 ---
 We deserve more intelligent conversations about climbing just like other sports get during the Olympics on Sport Center or what have you. I have been enjoying a lot of the content out there (shouts [Nugget Pod](https://thenuggetclimbing.com/episodes/olympic-reactions)). Here is mine.
 # Women 
