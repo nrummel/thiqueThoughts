@@ -74,8 +74,11 @@ In the same breath, the above plot demonstrates the sport popularity has increas
 According to the metric defined by $F_\mathrm{8a.nu}$, bouldering arguably was at its highest level 2019. While many people consider 2025 to be the best year in climbing ever, that is only true from the angle that Instagram is selling us... If one chooses to measure climbers by this *score*, then Jimmy Webb and Giuliano had a better year in 2019 than Will Bosi in 2025.
 
  ![[scoreDist2019.png|300]]  ![[scoreDist2025.png|300]]
+
 If we inspect the full tick list for the top climbers in 2019 (a tie between Jimmy and Giul) and the top climber of 2025, the plot thickens further.
+
 ![[peakYearComparison.png]]
+
 It is apparent that Will Bosi, while he may have done a 9A in 2025, he climbed far fewer boulders and established fewer new boulders as well. He actually didn't find it noteworthy to log any flashes either. Perhaps Will is climbing more climbs than he logs, but I doubt it. This data furthers my thesis that 2025 was in fact not a peak year for bouldering.
 
 Furthermore, if we zoom into the tale of the distribution of 2025 we see: 
