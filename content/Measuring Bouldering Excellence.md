@@ -13,35 +13,45 @@ Specifically, we have had several conversations about:
 Luckily for us, people in science and mathematics think about hard questions framed this way all the time. It drives me crazy when climbers say things like "well, grades are so subjective, so you really cannot say anything" or something to that effect. If humans gave up that easily on other hard problems, then we would still be putting leaches on our body to suck the bad humors out or other godforsaken idiocy. 
 # Comparing Climbers Mathematically
 As with everything in my life these days, I view it (partially) through a mathematical lens 😅. Hang in there, I promise I will get right to the point. In the climbing there are many objectives. This makes it hard to directly compare achievement and climbers who have non-overlapping achievements. Comparing two individual climbs or climbers is the simplest mathematic question we can ask. We want to obtain an ordering. Given climber $C^{(j)}$ and climber $C^{(k)}$, which one is better (greater)?
-$$C^{(j)} < C^{(k)}$$
+$$
+C^{(j)} < C^{(k)}
+$$
 This is fundamentally a difficult question. Because both climbers $C^{(j)}$ and $C^{(k)}$ are **people**, they are not well represented by one number. The most straight forward way to see how this plays out in math is to just let each climber be represented by two numbers (wow, crazy). 
 
 Consider this arbitrary example. Now, for the sake of simplicity say that a climber is completely represented by their redpoint grade and their flash grade. The first climber $C^{(j)}$ can redpoint 7A/V6 and flash 6C+/V5, and the second climber $C^{(j)}$ can redpoint 7A+/V7 but only can flash 6C/V4. If we only consider these two aspects of the climbers, we can represent them mathematically with the vectors  $C^{(j)} = (6,5)$ and $C^{(k)}=(7,4)$. Now ask yourself, is  $C^{(j)} < C^{(k)}$ or is $C^{(j)} > C^{(k)}$? The answer depends on how you *weigh* the redpoint grade and the flash grade! 
 
 It is critical to note that the way one chooses *weigh* a climber is a **value claim**. This means that you, yes you, bring your preconceived biases, judgment, and years of experience, or lack of, influences the comparison. 
 
-Let's call your *weighing* function $F_\mathrm{dingus} : \mathbb{V} \rightarrow \mathbb{R}$ (dingus is you). It takes in a climb(er) and outputs a single number by *weighing* the factors based off your judgment. After your *weights* are applied then the comparison is made easily.
-$$F_\mathrm{dingus}(X) < F_\mathrm{dingus}(Y)$$
+Let's call your *weighing* function $F_\mathrm{dingus}$ (dingus is you). It takes in a climb(er) and outputs a single number by *weighing* the factors based off your judgment. After your *weights* are applied then the comparison is made easily.
+$$F_\mathrm{dingus}(C^{(j)}) < F_\mathrm{dingus}(C^{(k)})$$
 Notably, $C$ and $F_\mathrm{dingus}$ can be as complicated as it needs to be... By this I mean, one can consider 
 - What is the grade?  How fast/slow one sends said climb? How good were the conditions when the climb was sent? Was the climb in their style? The list can go on and on...
 
-Of course, I have my own personal way I think about climbing from a more qualitative perspective, and I think it is important to inject subjectivity and set aside computation (from time to time). But this framework gives us footing for an intelligent discussion about climbing which I feel is often lacking clarity.
+Of course, I have my own personal way I think about climbing from a more qusalitative perspective, and I think it is important to inject subjectivity and set aside computation (from time to time). But this framework gives us footing for an intelligent discussion about climbing which I feel is often lacking clarity.
 
 >[!summary] Key Takeaway: How To Quantify Climbers
 > Two separate decisions are made when judging climbers:
-> - *First, one defines what should be considered in their calculation $X$. This could be just the grade, but it probably should be more than just a grade. 
+> - First, one defines what should be considered in their calculation $C$. This could be just the grade, but it probably should be more than just a grade. 
 > - Then, one decides how to *weigh* each components with some function $F_\mathrm{dingus}$. Unfortunately, you too are dingus. 
 ## A Concrete Example
 Is it more impressive to have spent a season establishing the first ascent of a 8B/V13 boulder or to have spent the same amount of time an energy sending a well established world-class 8C/V15? [8a.nu](https://www.8a.nu/) answers this question in a particular (and arbitrary) way. On the [website](https://www.8a.nu/ranking/bouldering?topAscents), they spell out how they judge a climber. Let's write it down in the framework that I laid out in the previous section. A boulder $x$ is essentially defined as the vector  
-$$\begin{aligned}
-x &:= (\text{grade, onsight, flash, firstAscent,  secondTry}), \\
-x &\in X:= \bigl\{(v, o,f,a,s) \mid v \in \{4A,4A+,\cdots,9A\}, (o,f,a,s) \in \{0,1\}^4\bigr\}.
-\end{aligned}$$ The *weighting* function $f_\mathrm{8a.nu}(X)$ is defined to be 
-$$\begin{aligned}
-	f_\mathrm{8a.nu}(x) :&= (\text{8A} \times 1000 + \Delta\times 50) \\
-	&+ 147\times \text{onsight} + 53 \times \text{flash} \\
-	&+ 33 \times \text{firstAscent} + 2\times \text{secondTry}.
-\end{aligned}$$To break this down for the non-mathy friends; for every grade harder you get 50 more *score points* where 8A+ is a grade harder than 8A. If it is an onsight, a flash, a first ascent, or a second try you get to sprinkle on some bonus. Furthermore, a climber $C$ is then ranked by the sum of their top $N$ *scores*, $F_\mathrm{8a.nu}(C) = \sum_{i=1}^{N} f_\mathrm{8a.nu}(X_i^C)$. The most popular ranking is based off the top ten scores $N=10$ for the most current twelve month window. 
+
+$$x := (\text{grade, onsight, flash, firstAscent,  secondTry})$$
+
+where $x \in \mathcal{X}:= \bigl\{(v, o,f,a,s) \mid v \in \{4A,4A+,\cdots,9A\}, (o,f,a,s) \in \{0,1\}^4\bigr\}.$
+The *weighing* function for a single boulder $f_\mathrm{8a.nu}(x)$ is defined to be
+
+$$f_\mathrm{8a.nu}(x) := (\text{8A} \times 1000 + \Delta\times 50) + 147\times \text{onsight} + 53 \times \text{flash} + 33 \times \text{firstAscent} + 2\times \text{secondTry}.$$
+
+To break this down for the non-mathy friends; for every grade harder you get 50 more *score points* where 8A+ is a grade harder than 8A. If it is an onsight, a flash, a first ascent, or a second try you get to sprinkle on some bonus. Furthermore, in this ranking system a climber $C_\mathrm{8a.nu}$ is valued by their top $N$ boulder scores 
+
+$$C_\mathrm{8a.nu} := (x_1, \cdots x_N).$$
+
+And the *weighing* function for a climber is defined as the sum of weiging functions accross the $N$ top climbs completed
+
+$$F_\mathrm{8a.nu}(C_\mathrm{8a.nu}) := \sum_{i=1}^{N} f_\mathrm{8a.nu}(x_i).$$
+
+The most popular ranking is based off the top ten scores $N=10$ for the most current twelve month window. 
 
 >[!note] Side Note: How Do Grades Even Work
 >But what even goes into grading a boulder? See my [[Climbing Grades|previous post]] if you are intested in fleshing that out in more detail.
@@ -61,8 +71,13 @@ This plot is very interesting because I think it highlights something that many 
 
 In the same breath, the above plot demonstrates the sport popularity has increased dramatically in the last 25 years. At the very least, the data demonstrates that many more people are serious enough to be logging climbing in a diligent way. 
 ## Did Bouldering Peak in 2025?
-Another point I would like to emphasize is that climbing at the highest level, according to $F_\mathrm{8a.nu}$, did not peak in 2025. While many people consider last year to be the best year in climbing ever, that is only true from the angle that Instagram is selling us... If one chooses to measure climbers by this *score*, then Jimmy Webb and Giuliano had a better year in 2019 than Will Bosi in 2025.
+According to the metric defined by $F_\mathrm{8a.nu}$, bouldering arguably was at its highest level 2019. While many people consider 2025 to be the best year in climbing ever, that is only true from the angle that Instagram is selling us... If one chooses to measure climbers by this *score*, then Jimmy Webb and Giuliano had a better year in 2019 than Will Bosi in 2025.
+
  ![[scoreDist2019.png|300]]  ![[scoreDist2025.png|300]]
+If we inspect the full tick list for the top climbers in 2019 (a tie between Jimmy and Giul) and the top climber of 2025, the plot thickens further.
+![[peakYearComparison.png]]
+It is apparent that Will Bosi, while he may have done a 9A in 2025, he climbed far fewer boulders and established fewer new boulders as well. He actually didn't find it noteworthy to log any flashes either. Perhaps Will is climbing more climbs than he logs, but I doubt it. This data furthers my thesis that 2025 was in fact not a peak year for bouldering.
+
 Furthermore, if we zoom into the tale of the distribution of 2025 we see: 
 - **TODO MAKE NEW PLOT and continue analysis**
 [[evenMore8aAnalysis|Link]] to more deep dives
