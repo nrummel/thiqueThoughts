@@ -1,16 +1,16 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { FileTrieNode } from "./quartz/util/fileTrie"
 
-
-let explorer = {
-  // title: "Look Around My Mind",  // title of the explorer component
+export const NicsExplorer = {
+  // title: "Look Around My Mind",  
   folderClickBehavior: "collapse", 
   folderDefaultState: "collapsed", 
   useSavedState: true, 
-  sortFn: (a, b) => {
+  sortFn: (a : FileTrieNode, b : FileTrieNode) => {
     return a.displayName.localeCompare(b.displayName)
   },
-  filterFn: (node) => {
+  filterFn: (node : FileTrieNode) => {
   // set containing names of everything you want to filter out
   const omit = new Set(["scrape", "finance"])
 
@@ -19,12 +19,12 @@ let explorer = {
   // (e.g. implicit folder nodes that have no associated index.md)
   // console.log(node.displayName)
   let flag = true; 
-  if ( node.file != null ){
+  if ( !node.isFolder ){
     // console.log(node.file);
     // for (const tag of node.file?.tags) {
     // console.log('--  ${index}');
     // }
-    flag = !node.file?.frontmatter?.tags?.includes("hidden") 
+    flag = !node.data?.tags?.includes("hidden") 
   }
 
   if (omit.has(node.displayName.toLowerCase())){
@@ -33,8 +33,8 @@ let explorer = {
 
   return flag
 },
-mapFn: (node) => {
-  if (node.file == null) {
+mapFn: (node : FileTrieNode) => {
+  if (node.isFolder) {
     node.displayName = "📁 " + node.displayName
   } else {
     node.displayName =  node.displayName
@@ -90,7 +90,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(explorer)
+    Component.Explorer(NicsExplorer)
   ],
   right: [
     // Component.Graph({
@@ -143,7 +143,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(explorer),
+    Component.Explorer(NicsExplorer),
   ],
   right: [],
 }
