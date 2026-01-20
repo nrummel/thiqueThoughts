@@ -93,6 +93,6 @@ Now that I dragged you through some math, or you skipped it because your lazy ðŸ
 In light of this, I think it is best to take a more qualitative approach. The incentives especially for professional climbers have become more nuanced in the past decade. The media is less of a monolith, and thus climbers rely on the algorithm and sensationalism to gain attention online. This has a direct impact on their livelihood, so it is not fair to judge the climbers too harshly for their behavior. Needless to say, it feels like grades at the highest level have seen a recent inflation. 
 
 I liken this to tech stocks with the rise of AI. It's really hard to know if the companies are worth what market says they are... Regardless should you still probably buy the SNP 500, so you can retire and hangout with me at Herm's house. We are going to be drinking plum juice in an attempt to manifest 8A (Herm likely will still climb 8A).
-![[hermMeme.gif|300]]
+![[HermMeme.gif|300]]
 # Wrap Up
 I concede it is challenging to understand what it means for one climb(er) to be better than another, but we as climbers love challenges. Don't immediately pigeonhole yourself before you even begin to tackle the problem. In fact, I think this is why climbing is a compelling sport to discuss. Unlike power lifting or the 100m dash, our sports have a lot to wrestle with beyond "is number higher/lower"... The complexity involved with describing our pursuit is why climbing is a compelling topic of conversation.
