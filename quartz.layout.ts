@@ -1,6 +1,51 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+
+let explorer = {
+  // title: "Look Around My Mind",  // title of the explorer component
+  folderClickBehavior: "collapse", 
+  folderDefaultState: "collapsed", 
+  useSavedState: true, 
+  sortFn: (a, b) => {
+    return a.displayName.localeCompare(b.displayName)
+  },
+  filterFn: (node) => {
+  // set containing names of everything you want to filter out
+  const omit = new Set(["scrape", "finance"])
+
+  // can also use node.slug or by anything on node.data
+  // note that node.data is only present for files that exist on disk
+  // (e.g. implicit folder nodes that have no associated index.md)
+  // console.log(node.displayName)
+  let flag = true; 
+  if ( node.file != null ){
+    // console.log(node.file);
+    // for (const tag of node.file?.tags) {
+    // console.log('--  ${index}');
+    // }
+    flag = !node.file?.frontmatter?.tags?.includes("hidden") 
+  }
+
+  if (omit.has(node.displayName.toLowerCase())){
+    flag = false
+  }
+
+  return flag
+},
+mapFn: (node) => {
+  if (node.file == null) {
+    node.displayName = "📁 " + node.displayName
+  } else {
+    node.displayName =  node.displayName
+  }
+},
+// what order to apply functions in
+order: ["filter", "map", "sort"],
+}
+
+
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -45,7 +90,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer(explorer)
   ],
   right: [
     // Component.Graph({
@@ -98,7 +143,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer(explorer),
   ],
   right: [],
 }
