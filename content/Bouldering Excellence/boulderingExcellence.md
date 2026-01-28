@@ -116,7 +116,7 @@ Let's look at a possibly more complicated question and move beyond just comparin
 
 Personally, I still find Daniel Woods 2013 year to be inspiring. This was the year when he established [*Hypnotized Minds*](https://www.youtube.com/watch?v=Jq6CaFjJJlY) among many other stout boulders. Inspecting the full tick list for Daniel in 2013, the top climbers of 2019 Jimmy and Giul, and the top climbers of 2025 Noah and Will. The plot thickens...
 
-![[peak_year_comparison.html]]
+![[content/fig/boulderingExcellence/peak_year_comparison/index.html]]
 
 >[!warning] This Plot is Best on a Computer
 > This plot has hover information that is best viewed with desktop browser and the aid of a mouse. When viewed on a mobile device, it is less informative.

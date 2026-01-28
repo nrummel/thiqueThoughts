@@ -53,7 +53,7 @@ const defaultOptions: Options = {
   parseTags: true,
   parseArrows: true,
   parseBlockReferences: true,
-  enableInHtmlEmbed: true,
+  enableInHtmlEmbed: false,
   enableYouTubeEmbed: true,
   enableVideoEmbed: true,
   enableCheckbox: false,
@@ -264,7 +264,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                       value: `<iframe src="${url}" class="pdf"></iframe>`,
                     }
                   } else if ([".html"].includes(ext)){
-                    return {type: "html",
+                    let dic = {type: "html",
                       value: `<style>
 .chart-container {
   position: relative;
@@ -285,8 +285,10 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 </style>
 
 <div class="chart-container">
-<iframe src="${url}"></iframe>
-</div>`}
+<iframe src="${url}.html" sandbox="allow-scripts allow-same-origin"></iframe>
+</div>`}  
+                    console.log(dic)
+                    return dic
                   }else {
                     const block = anchor
                     return {

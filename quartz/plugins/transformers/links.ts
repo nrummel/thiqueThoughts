@@ -117,12 +117,19 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   if (destCanonical.endsWith("/")) {
                     destCanonical += "index"
                   }
-
                   // need to decodeURIComponent here as WHATWG URL percent-encodes everything
                   const full = decodeURIComponent(stripSlashes(destCanonical, true)) as FullSlug
                   const simple = simplifySlug(full)
                   outgoing.add(simple)
-                  node.properties["data-slug"] = full
+                  let finalFull = ''
+                  const ext: string = path.extname(full).toLowerCase()
+                  if (full.includes('fig') && ext.length == 0 ){
+                    finalFull = full+'.html'
+                  } else{
+                    finalFull = full
+                  }
+                  console.log(finalFull)
+                  node.properties["data-slug"] = finalFull
                 }
 
                 // rewrite link internals if prettylinks is on

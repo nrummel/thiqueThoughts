@@ -66,8 +66,8 @@ const config: QuartzConfig = {
         keepBackground: false,
       }),
       Plugin.ObsidianFlavoredMarkdown({ 
-        enableInHtmlEmbed: true,
-        parseBlockReferences: true
+        enableInHtmlEmbed: false,
+        parseBlockReferences: false
       }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
