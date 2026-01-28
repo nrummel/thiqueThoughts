@@ -263,7 +263,31 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                       type: "html",
                       value: `<iframe src="${url}" class="pdf"></iframe>`,
                     }
-                  } else {
+                  } else if ([".html"].includes(ext)){
+                    return {type: "html",
+                      value: `<style>
+.chart-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.chart-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+
+<div class="chart-container">
+<iframe src="${url}"></iframe>
+</div>`}
+                  }else {
                     const block = anchor
                     return {
                       type: "html",

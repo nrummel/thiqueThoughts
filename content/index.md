@@ -13,8 +13,8 @@ My name is Nic Rummel, and I am an avid rock climber and applied mathematician. 
 - [[gradesOverview|Grades - A Mathematical Perspective]]
 	- [[gradesDirtyDetails|Grades - Case Study]]
 	- [[gradesCaseStudy|Grades - Dirty Details 🧮 ]]
-- [[boulderingExcellence|Bouldering Excellence - Overview]]
-	- [[newClimbingMetrics|Crafting Better Bouldering Metrics 📊]]
+- [[boulderingExcellence|Bouldering Excellence - An Overview]]
+	- [[newClimbingMetrics|Bouldeirng Excellence - Crafting Better Metrics 📊]]
 	- [[appendixBoulderingExcellence|Bouldering Excellence - Appendix  ]]
 # Contact 
 - Email: nicrummel (symbol you should know but the AI MAYBE wont) gmail (ending you should know)
