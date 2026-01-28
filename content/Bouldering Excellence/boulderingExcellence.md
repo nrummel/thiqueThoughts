@@ -100,11 +100,29 @@ According to the metric defined by $F_\mathrm{8a.nu}$, bouldering arguably was a
 
 If we inspect the full tick list for the top climbers in 2019 (a tie between Jimmy and Giul) and the top climber of 2025, the plot thickens further.
 
-<iframe src=fig/boulderingExcellence/peak_year_comparison.html onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:500px;width:100%;border:none;overflow:hidden;"> 
-</iframe>
-%% 
-![[peak_year_comparison.html] 
-%%
+<style>
+  .chart-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .chart-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+
+<div class="chart-container">
+  <iframe src="fig/boulderingExcellence/peak_year_comparison.html"></iframe>
+</div>
+
 
 It is apparent that Will Bosi, while he may have done a 9A in 2025, he climbed far fewer boulders and established fewer new boulders as well. He actually didn't find it noteworthy to log any flashes either. Perhaps Will is climbing more climbs than he logs, but I doubt it. This data furthers my thesis that 2025 was in fact not a peak year for bouldering.
 
