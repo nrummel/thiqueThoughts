@@ -1,6 +1,6 @@
 ---
-title: Two Boulders on Mt. Blue Sky
-date: 30.07.2024 🗻
+title: Grades - Case Study
+date: 2024-07-30
 draft: false
 ---
 
@@ -9,7 +9,7 @@ Let's see the math in action! I applied [[Climbing Grades#We Should Use a Stocha
 While the climbs are adjacent to each other on the Dali wall, they pose different challenges to a climber. First, "Clear Blue Skies" (CBS) sits in the middle of the wall with brutally small holds that are slippery to the touch. On the right side of the wall is "No More Greener Grasses" (NMGG). After discussions with many expert climbers, it is well understood that the difficulty of CBS mostly derives itself from making relatively small but powerful moves between these small holds. NMGG is a similar number of moves, but it covers much more distance. The holds are larger, and the wall is steeper. Currently, both are considered to be graded around "V11" or "V12," but their history is rich and people's opinions surrounding the relative difficulty of each climb is fraught with controversy.
 
 >[!example] Elite climber Jess Walker climbing Clear Blue Skies
->![[fig/CBS.jpeg]]
+>![[content/fig/CBS.jpeg]]
 
 
 At the time of writing, it is more common for ascensionists to grade CBS as "V11" and NMGG as "V12." From [anecdotal reports](https://www.8a.nu/crags/bouldering/united-states/mt-evans/sectors/area-a-175a0/routes/clear-blue-skies), both take a similar amount of effort and time to complete. This indicates the climbs are comparable. It appears that CBS suits a narrower range of body morphologies and competencies, and NMGG is more amicable to a broader range of morphologies and competencies. The [[Climbing Grades#We Should Use a Stochastic Model|models described]] are applied to analyze these two climbs.
@@ -48,11 +48,11 @@ $$\hat{D}_{KL}(p || f) = \frac{1}{J} \sum_{n=2}^N \log(\dfrac{\delta P_n}{\delta
 where $\delta P_n$ is the difference in the fit distribution's CDF from the ordered data $n-1$ to $n$, and $\delta Q_n$ is the difference in the empirical CDF from the ordered data $n-1$ to $n$.
   
 >[!example] Clear Blue Skies
->![[fig/cbsFit.png]]
+>![[content/fig/cbsFit.png]]
 >For all of the available debiased CBS grades, I fit the Uniform, Gamma and Normal distributions to the data, as well as a Gaussian Mixture, and KDE. We see that the Gaussian Mixture or KDE performs best.
 
 >[!example] No More Greener Grasses
->![[fig/nmggFit.png]]
+>![[content/fig/nmggFit.png]]
 >For all of the available debiased NMGG grades, I fit the Uniform, Gamma and Normal distributions to the data, as well as a Gaussian Mixture, and KDE. We see that the Gaussian Mixture or KDE performs best.
 
 The KL divergence varies depending on which distribution is used. It may be tempting to blindly select the Gaussian Mixture for both climbs because it does minimize the KL divergences. However, qualitatively CBS appears to have two modes (peaks) while NMGG visually has one mode with a single outlier. Thus, the Gaussian Mixture and the KDE could be overfitting the data in the case of NMGG and likely selecting the Gamma or Normal distribution is more prudent.
@@ -70,11 +70,11 @@ The fit distributions form a sequence $\{F_{d_n}\}_{n=1}^N$, and if the distribu
 In the histograms in the section above, both CBS and NMGG have not converged to a single grade as seen clearly in the data. But what about the fit distributions? Below are plots of how the KDE changes as more ascents occur over time. The ascents were ordered in time, and then a distribution was fit to a subset of the data, starting with the first ten ascents, then adding one ascent and then another and so on. The KL divergence between fit distributions is computed to see if the sequence is in fact converging. For those who don't commonly see logarithms, recall as $\log(D_{KL})$ approaches $-\infty$, $D_{KL}$ approaches 0.
 
 >[!example] Clear Blue Skies
->![[fig/cbsConverge.png]]
+>![[content/fig/cbsConverge.png]]
 >On the left is a surface of fit distributions, and on the right is the pairwise KL divergence between the adjacent fit distributions.
 
 >[!example] No More Greener Grasses
->![[fig/nmggConverge.png]]
+>![[content/fig/nmggConverge.png]]
 >On the left is a surface of fit distributions, and on the right is the pairwise KL divergence between the adjacent fit distributions.
 
 A Gaussian Mixture model was selected for CBS, and a Normal distribution was used for NMGG. Setting $\epsilon = 10^{-8}$, both sequences can be considered to have converged. This demonstrates that the climbs are in fact generating a grade that is random rather than a fixed number.
@@ -84,11 +84,11 @@ A Gaussian Mixture model was selected for CBS, and a Normal distribution was use
 What do you gain from using this model over the conventional consensus or personal integer grade? For one, these fit models can be interpreted into actionable information. If one were to integrate under the curve from 0 to 11.75 for the Gaussian Mixture fit to the ascents of CBS, they would get $\approx 54\%$. This represents the probability that someone would experience a "hard V11" or less. One could then use this information to prepare themselves for the likelihood that they might experience a "V11" but there is almost an equal probability that they will experience "V12". Using the same process for the fit Gamma distribution for NMGG, one can only expect a $\approx2\%$ chance that they will experience a "hard V11" or less.
 
 >[!example] Clear Blue Skies
->![[fig/cbsInt.png]]
+>![[content/fig/cbsInt.png]]
 >We see that the probability that  a person would experience "V11" on CBS, is actually quite high. This means that without knowing anything about a particular climber, we can say that in general one can probably expect to feel like CBS is a *hard* "V11" or easier. 
 
 >[!example] No More Greener Grasses
->![[fig/nmggInt.png]]
+>![[content/fig/nmggInt.png]]
 >In contrast, the data shows that most people expierence NMGG at a grade of "V12" or harder.
 
 To me this is slightly surprising! I definitely think that CBS feels more challenging. This could be because on my specific body morphology, the conditions when I attempted the climb, my lack of ability to assess difficulty accurately, or my bias. Another aspect to consider is that this data analysis does not account for the tendency of the whole community to report a grade that others have taken. The model could be updated model by having the bias depend on the current grade distribution. I think the data may be skewed due to this effect. Thus, as with everything take this analysis with a grain of salt.  

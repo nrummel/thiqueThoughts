@@ -8,11 +8,39 @@ export const NicsExplorer = {
   folderDefaultState: "collapsed", 
   useSavedState: true, 
   sortFn: (a : FileTrieNode, b : FileTrieNode) => {
-    return a.displayName.localeCompare(b.displayName)
+    console.log('- ${a.displayName} vs b.displayName');
+     if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+      let flag = 0; 
+      if (a.data?.date !== undefined && b.data?.date == undefined){
+        flag = Math.sign(a.data?.date - b.data?.date);
+      }
+      return flag + a.displayName.localeCompare(b.displayName, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
+    }
+ 
+    if (!a.isFolder && b.isFolder) {
+      return 1
+    } else {
+      return -1
+    }
+    // let flag = 0; 
+    // if (a.data?.date !== undefined && b.data?.date == undefined){
+    //   console.log('--  ${a.data?.date}');
+    //   console.log('--  ${b.data?.date}');
+    //   console.log(a.data?.date)
+    //   flag = Math.sign(a.data?.date - b.data?.date);
+    //   console.log('-- comparing dates');
+    // } 
+    // console.log('-- comparing display names');
+    // flag = flag + a.displayName.localeCompare(b.displayName);
+    // console.log('-- ${flag} ');
+    return flag
   },
   filterFn: (node : FileTrieNode) => {
   // set containing names of everything you want to filter out
-  const omit = new Set(["scrape", "finance"])
+  const omit = new Set(["scrape", "finance", "hidden"])
 
   // can also use node.slug or by anything on node.data
   // note that node.data is only present for files that exist on disk

@@ -1,6 +1,6 @@
 ---
-title: Dirty Details of Modeling Climbing Grades 👷
-date: 30.07.2024
+title: Grades - Dirty Details 🧮 
+date: 2024-07-30
 draft: false
 ---
 This is a hodge-podge of ideas that did not make it into the full discussion on [[Climbing Grades]]. I apologize for the lack of organization here.
@@ -32,7 +32,7 @@ There is a choice of distribution for both the *experienced difficulty*, $h(X,y,
 >When enough samples are collected the mean of samples is another random variable that is distributed normally. This is known as the [Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem).
 
 >[!example]
->![[fig/dist.png]]
+>![[content/fig/dist.png]]
 >Above are candidate distributions for a hypothetical "V5". All have a mean grade of "V5", but with different behavior.
   
 While the normal distribution is how most readers may first conceptualize a grade viewed as a random variable, there is good reason to think that the *experienced difficulty* could be distributed in a variety of ways. In this paper, the uniform, the normal distribution, the Gamma distribution, Gaussian Mixtures and Kernel Density Estimates (KDE) are considered. 

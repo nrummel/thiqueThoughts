@@ -1,6 +1,6 @@
 ---
-title: How Did Nic Make This Website
-date: 07.20.2024
+title: How To Make This Website❓
+date: 2024-07-20
 draft: false
 ---
 

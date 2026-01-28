@@ -1,6 +1,6 @@
 ---
-title: Climbing Grades, Mathematically 😈
-date: 30.07.2024
+title: Grades - A Mathematical Perspective
+date: 2024-07-30
 draft: false
 ---
 Discussions around grades circulate in rock climbing all the time. The sport is multifaceted, and each climb poses a variety of challenges. Historically, climbers have given each route or boulder a grade, a single number. Grades allow climbers to understand the level of challenge they can expect. Also, it allows for comparison between ascents, and ideally one climb on a continent across the ocean is comparable to one at the local crag or gym.
@@ -70,7 +70,7 @@ We assume climbers and environmental factors to change, thus we expect climbing 
 One can visualize continuous random variables through their probability distribution function (when it exists).
 
 >[!example]
->![[fig/dist.png]]
+>![[content/fig/dist.png]]
 >Above are candidate distributions for a hypothetical "V5". All have an average grade of "V5", but with different behavior. This allows us to model one "V5" where mostly everyone agrees (Uniform or Normal), and another "V5" where there is much disagreement (Gamma or Gaussian Mixture Model).
 ## Bias
 To account for *bias*, I wrote a (simple, perhaps naive) [[Debiasing Algo.png|algorithm]] to estimate the expected bias for a particular climber $\mathbb{E}[b(X)]$. This allows us to then estimate the *experienced grade*. You can think of this as a Bayesian approach (with some handwaving). We are conditioning on the expected bias. Thus, we can obtain the debiased grade:

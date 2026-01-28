@@ -1,6 +1,6 @@
 ---
 title: ⚒️ Bouldering Tactics 🛠️
-date: 01.06.2026
+date: 2026-01-06
 draft: false
 ---
 Nobody asked for this, and as a D tier *elite climber*, you probably should return to scrolling your Instagram.
