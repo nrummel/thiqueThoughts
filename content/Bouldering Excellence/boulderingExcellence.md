@@ -143,15 +143,15 @@ Unfortunately, climbers are not incentivized to build a true consensus on grades
 > ![[theGreyMeme.png]]
 > While young guns generally take higher grades because they want to be in the big leagues already, but they likely have years of grinding ahead of them.
 > ![[trafficMeme.png]]
-> I sympathize with both tendancies, and the generalization I made are not always true. What is true is that lying is dishonest. I implore you to be aware of your tendancies whatever they might be. 
+> I sympathize with both tendancies, and the stated age related generalizations are not always true. Tautologically, we know that lying is dishonest. I implore you to be aware of your tendancies whatever they might be. 
 
-I liken this grade inflation to the current state of tech stocks with the rise of AI. It's really hard to know if the companies are worth what market says they are... but they are probably overvalued. In the same way, the data and my gut instinct tell me grades have been inflating. The analogy break down quickly, you should still probably buy the SNP 500, so you can retire and hangout with me at Herm's house. When I'm 65, I'll be in his basement, drinking plum juice and attempting to manifest 8A. Herm likely will still climb 8A.
+I liken this grade inflation to the current state of tech stocks with the rise of AI. It's really hard to know if the companies are worth what market says they are... but it stands to reason that many are overvalued. In the same way, the data and my gut instinct tell me grades have been inflating. The analogy breaks down quickly, you should still probably buy the SNP 500. That way we can retire and hangout at Herm's house. When I'm 65, I'll be in his basement drinking plum juice and attempting to manifest 8A. Herm likely will still climb 8A.
 
 ![[HermMeme.gif|300]]
 
 >[!note] Side Note: I Made **EVEN MORE** plots
 >If you want see more look in the [[appendixBoulderingExcellence|appendix]]. There is no further discussion, so you will have to make up your own mind on what they mean...
 # Closing Remarks
-Now that I dragged you through some math, or you skipped it because your lazy 🙄, let's close with a brief overview. I grant that quantitative analysis of our sport suffers from many challenges: a lack of reliable data, ambiguity when modeling the system, and other complicating factors. In particular, the grades that climbers report may be wrong. I discussed previously when we looked at [[gradesDirtyDetails#Bias|reporting bias]] in the discussion on grades. 
+Now that I dragged you through some math, or you skipped it because your lazy 🙄, let's close with a brief overview. I grant that quantitative analysis of our sport suffers from many challenges: a lack of reliable data, ambiguity when modeling the system, and other complicating factors. In particular, the grades that climbers report may be wrong. I discussed this previously when we looked at [[gradesDirtyDetails#Bias|reporting bias]] in the discussion on grades. 
 
 I concede it is challenging to understand what it means to be excellent in climbing. I implore everyone to not immediately pigeonhole the discussion before we even start. The complexity of our sport is why climbing is such a compelling topic. Unlike power lifting or the 100m dash, our sport has a lot to more unpack beyond "number is higher/lower". The complexity involved with describing our pursuit is why climbing is a compelling topic of conversation.
