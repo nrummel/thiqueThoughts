@@ -17,8 +17,12 @@ This two pronged approach is **not unique** to climbing. In fact, I am very insp
 
 It drives me crazy when climbers say things like "well, grades are so subjective, so one really **cannot say anything** meaningful". Climbing is a younger sport, and, yes, reliable data is less available. Even with these obstacles, it is my firm opinion that we can have a much more articulate discussion.
 
-Luckily for us, people in sciences, mathematics, and analysts from other sports have already thought hard about how to assess excellence framed in the way I am proposing. All we need to do is modify the existing tools to suit our beautiful sport.
+Luckily for us, people in sciences, mathematics, and analysts from other sports have already thought hard about how to assess excellence framed in the way I am proposing. All we need to do is modify the existing tools to suit our beautiful sport.****
 # Preliminaries
+
+>[!note] For My Non-Mathy Friends
+> If you can't hang in there with the math for a few paragraphs, then skip to [[boulderingExcellence#Historical Analysis|the next section]]. 
+
 Let's get started by grounding ourselves. As with everything it is best viewed (partially) through a mathematical lens 😅. Hang in there, I promise I will get right to the point. Comparing two individual climbs or climbers is the simplest mathematic question one can ask. We want to obtain an [ordering](https://en.wikipedia.org/wiki/Total_order). Given climber $C^{(j)}$ and climber $C^{(k)}$, which one is better (greater)?
 $$C^{(j)} < C^{(k)}$$
 This is fundamentally a difficult question. Because both climbers $C^{(j)}$ and $C^{(k)}$ are **people**, they are not well represented by one number. In the climbing there are many so objectives. This makes it hard to directly compare climbers who have non-overlapping achievements. The most straight forward way to see how this plays out in math is to just let each climber be represented by **two numbers** instead of one. 
