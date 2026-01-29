@@ -21,6 +21,8 @@ Climbing is not more complex, we are just not applying ourselves. It drives me c
 
 >[!note] For My Non-Mathy Friends
 > If you can't hang in there with the math for a few paragraphs, then skip to [[boulderingExcellence#Historical Analysis|the next section]]. 
+>
+> ![[sharmaMeme.gif|center]]
 
 Let's get started by grounding ourselves. As with everything it is best viewed (partially) through a mathematical lens 😅. Hang in there, I promise I will get right to the point. Comparing two individual climbs or climbers is the simplest mathematic question one can ask. We want to obtain an [ordering](https://en.wikipedia.org/wiki/Total_order). Given climber $C^{(j)}$ and climber $C^{(k)}$, which one is better (greater)?
 ```math 
@@ -181,9 +183,13 @@ I liken this grade inflation to the current state of tech stocks with the rise o
 
 ![[HermMeme.gif|center]]
 
->[!note] Side Note: I Made **EVEN MORE** plots
->If you want see more look in the [[appendixBoulderingExcellence|appendix]]. There is no further discussion, so you will have to make up your own mind on what they mean...
 # Closing Remarks
 Now that I dragged you through some math, or you skipped it because your lazy 🙄, let's close with a brief overview. I grant that quantitative analysis of our sport suffers from many challenges: a lack of reliable data, ambiguity when modeling the system, and other complicating factors. In particular, the grades that climbers report may be wrong. This was discussed previously in the discussion of [[gradesDirtyDetails#Bias|reporting bias]] effecting bouldering grades. 
 
 I concede it is challenging to understand what it means to be excellent in climbing. I implore everyone to not immediately pigeonhole the discussion before we even start. The complexity of our sport is why climbing is such a compelling topic. Unlike power lifting or the 100m dash, our sport has a lot to more unpack beyond "number is higher/lower". The complexity involved with describing our pursuit is why climbing is a compelling topic of conversation.
+
+>[!tip] Acknowledgements
+> A huge shoutout to all my prereaders/reviewers: Austin Purdy, Paige Witter, Ethan Rummel, and Sam Struthers. The clean copy award goes to them.
+
+>[!note] Side Note: I Made **EVEN MORE** plots
+>If you want see more look in the [[appendixBoulderingExcellence|appendix]]. There is no further discussion, so you will have to make up your own mind on what they mean...
