@@ -181,7 +181,7 @@ Unfortunately, climbers are not incentivized to build a true consensus on grades
 
 I liken this grade inflation to the current state of tech stocks with the rise of AI. It's really hard to know if the companies are worth what market says they are... but it stands to reason that many are overvalued. In the same way, the data and my gut instinct tell me grades have been inflating. The analogy breaks down quickly, you should still probably buy the SNP 500. That way we can retire and hangout at Herm's house. When I'm 65, I'll be in his basement drinking plum juice and attempting to manifest 8A. Herm likely will still climb 8A.
 
-![[hermMeme.gif|center]]
+![[HermMeme.gif|center]]
 
 # Closing Remarks
 Now that I dragged you through some math, or you skipped it because your lazy 🙄, let's close with a brief overview. I grant that quantitative analysis of our sport suffers from many challenges: a lack of reliable data, ambiguity when modeling the system, and other complicating factors. In particular, the grades that climbers report may be wrong. This was discussed previously in the discussion of [[gradesDirtyDetails#Bias|reporting bias]] effecting bouldering grades. 
