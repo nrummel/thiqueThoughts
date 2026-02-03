@@ -269,7 +269,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 .chart-container {
   position: relative;
   width: 100%;
-  padding-bottom: 62%; /* 16:9 Aspect Ratio */
+  padding-bottom: 65%; /* 16:9 Aspect Ratio */
   height: 0;
   overflow: hidden;
 }
