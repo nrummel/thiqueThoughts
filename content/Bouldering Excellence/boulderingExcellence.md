@@ -196,17 +196,18 @@ If you want to understand time series, I suggest reading [[Brockwell and Davis -
 >There is statistically significant evidence that climbers behavior changed in 2024 and 2025. This could mean they are just allocating their time differently, and elite boulderers are prioritizing climbing more 8C, 8C+, 9A boulders than ever before. Because the number of 8B and 8B+ did not go down during this time, the idea that they are just allocating their time differently raises my eyebrows. More likely, the grades are inflated.
 
 ---
-### A Cry in the Darkness: Consensus 
+### A Cry in the Darkness: Honesty 
 
->[!note] It's in Da Bible
->I'm usually note on to pull together the Judeo-Christian philosophy, math, and climbing all in the same breath, but y'all pagans scared Jesus into me.
->**Proverbs 12:22a**
-><center>Lying lips are an abomination</center>
+>[!note] 🐑 A Biblical Perspective 🐑
+> It's crazy to pull together the Judeo-Christian philosophy, mathematics, and bouldering into the same breath, but the pagans scare me 🙏
+> - **Proverbs 12:22a** : "Lying lips are an abomination"
+> - **Jeremiah 13:17** : "But if you do not listen, I will weep in secret because of your pride. My eyes will overflow with tears, because the flock has been taken captive"
 >
-> **Jeremiah 13:17**
-> <center>"But if you do not listen, I will weep in secret because of your pride. My eyes will overflow with tears, because the flock has been taken captive"</center>
+> ![[sheepPeopleMeme.gif]]
 
-Unfortunately, there are currently not incentives to build a true consensus on grades. Anecdotally, there is a notable Swiss climber who gets paid bonuses for every first ascent 8C and harder he establishes. Beyond this example, just look at peoples scorecards on 8a.nu or read a few Instagram captions. People love to say "this climb is hard/soft". In private conversations, people are usually much more forth coming with their opinions on grades. I argue people should strive to be open and honest **on** the internet as well. Downgrade when appropriate, upgrade when appropriate (even if the [pros](https://youtu.be/Z7kmVhxaTVc?si=I7aVoniApC26MGhh&t=3907) won't). I am a firm believe that both sandbagging and candy-bagging do a disservice to the sport. 
+Unfortunately, market incentives do not naturally push boulderers to build consensus. Notably, there is a particular Swiss climber who gets paid bonuses for every first ascent 8C and harder he establishes. Looking beyond this example at peoples scorecards on 8a.nu or Instagram captions we see people writing things to the effect of "this climb is hard/soft". 
+![[brainRotScreenShot.png]]
+In private conversations, people are usually much more forth coming with their opinions on grades. I argue people should strive to be open and honest **on** the internet as well. Downgrade when appropriate, upgrade when appropriate (even if the [pros](https://youtu.be/Z7kmVhxaTVc?si=I7aVoniApC26MGhh&t=3907) won't). I am a firm believe that both sandbagging and candy-bagging do a disservice to the sport. 
 
 >[!error] Hot Take: Grade Dishonesty is Bad Up and Down
 > In general, unc's think it makes them tough to take harder grades, but this likely comes from a place of personal insecurity as they age. Often they only really do this at grades that don't effect their ego but just other peoples egos... This is petty. 
