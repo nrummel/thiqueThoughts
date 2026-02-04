@@ -187,11 +187,11 @@ The dots correspond to the number of ascents logged for in a given year. Each da
 
 Also, the ascents logged 8B/V13 up to the grade of interest were used as [*exogenous*](https://en.wikipedia.org/wiki/Exogenous_and_endogenous_variables) data. For the 8C/V15 model in yellow, the model is aware of how many 8B+/V14 and 8B/V13 were reported in that year and the years leading up to the current year. If there was a meaningful trend in the slightly lower grades corresponding to younger climbers *moving up the ranks*, then the model would *learn* this. In essence, the model tries to account rising elite boulderers or rising level of the sport as a whole. Thus, if the sport has been *ramping* up in the years leading up to 2024 and 2025, the model would use this information to predict that more hard boulders would get completed in the coming year. 
 
-The years of 2024 and 2025 were excluded from the fit, because the goal of this excercise was to see if their is a **statistically significant** change in the behavior of climbers, and there is a drastic change in the dynamics of the system in these years. Breaking down the hypothesis tests: 
-- At a significance level of $\alpha=0.05=5\%$, the hypothesis test would reject the null hypothesis for 8C+ and 9A in both 2024 and 2025. 
-- The test barely fails to reject for the number of 8C ascents logged in 2024 with $\mathbb{P}\left(\frac{x_{2024} - \bar{x}_{2024}}{s_{2024}} \geq z_{\alpha=0.05}\right) = 0.06$, and the test for 8C does fail in 2025. 
+The years of 2024 and 2025 were excluded from the fit, because the goal of this exercise was to see if their is a **statistically significant** change in the behavior of climbers, and there is a drastic change in the dynamics of the system in these years. Breaking down the hypothesis tests: 
+- At a significance level of $\alpha=0.05=5\%$, the hypothesis test would reject the null hypothesis for 8C+/V16 and 9A/V17 in both 2024 and 2025. 
+- The test barely fails to reject for the number of 8C/V15 ascents logged in 2024 with $\mathbb{P}\left(\frac{x_{2024} - \bar{x}_{2024}}{s_{2024}} \geq z_{\alpha=0.05}\right) > 0.05$, and the test for 8C does fail in 2025. 
 
-If you want to understand time series, I suggest reading [[Brockwell and Davis - 2016 - Introduction to Time Series and Forecasting.pdf#page=169|Brockwell and Davis (2016)]] and if you want to better understand mathematical statistics, I suggest reading [[Corcoran - The Simple and Inﬁnite Joy of Mathematical Statist.pdf|Corcoran (2022)]]
+If you want to understand time series, I suggest reading [[Brockwell and Davis - 2016 - Introduction to Time Series and Forecasting.pdf#page=169|Brockwell and Davis (2016)]], and if you want to better understand mathematical statistics, I suggest reading [[Corcoran - The Simple and Inﬁnite Joy of Mathematical Statist.pdf|Corcoran (2022)]]
 
 >[!summary] Take Away : Climbers certainly have changed their behavior; Grade inflation is possible
 >There is statistically significant evidence that climbers behavior changed in 2024 and 2025. This could mean they are just allocating their time differently, and elite boulderers are prioritizing climbing more 8C, 8C+, 9A boulders than ever before. Because the number of 8B and 8B+ did not go down during this time, the idea that they are just allocating their time differently raises my eyebrows. More likely, the grades are inflated.
@@ -206,9 +206,9 @@ If you want to understand time series, I suggest reading [[Brockwell and Davis -
 >
 > ![[sheepPeopleMeme.gif]]
 
-Unfortunately, market incentives do not naturally push boulderers to build consensus. Notably, there is a particular Swiss climber who gets paid bonuses for every first ascent 8C and harder he establishes. Looking beyond this example at peoples scorecards on 8a.nu or Instagram captions we see people writing things to the effect of "this climb is hard/soft". 
+Unfortunately, market incentives do not naturally push boulderers to build consensus. Notably, there is a particular Swiss climber who gets paid bonuses for every first ascent 8C and harder he establishes. Looking beyond this example at peoples scorecards on 8a.nu or Instagram captions we see people writing things to the effect of "this climb is hard/soft ... but I'll just take the grade". 
 ![[brainRotScreenShot.png]]
-In private conversations, people are usually much more forth coming with their opinions on grades. I argue people should strive to be open and honest **on** the internet as well. Downgrade when appropriate, upgrade when appropriate (even if the [pros](https://youtu.be/Z7kmVhxaTVc?si=I7aVoniApC26MGhh&t=3907) won't). I am a firm believe that both sandbagging and candy-bagging do a disservice to the sport. 
+In private conversations, people are usually much more forth coming and precise with their opinions on grades. I argue people should strive to be open and honest **on the internet as well** . Downgrade when appropriate, upgrade when appropriate (even if the loud voices only [preach this philosophy half-heartedly](https://youtu.be/Z7kmVhxaTVc?si=I7aVoniApC26MGhh&t=3907). Basically, only be precise at grades that don't effect clout.) I am a firm believe that both sandbagging and candy-bagging do a disservice to the sport. 
 
 >[!error] Hot Take: Grade Dishonesty is Bad Up and Down
 > In general, unc's think it makes them tough to take harder grades, but this likely comes from a place of personal insecurity as they age. Often they only really do this at grades that don't effect their ego but just other peoples egos... This is petty. 
