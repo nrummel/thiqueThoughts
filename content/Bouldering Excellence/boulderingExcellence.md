@@ -148,7 +148,6 @@ Let's look at a possibly more complicated question and move beyond just comparin
 Personally, I still find Daniel Woods 2013 year to be inspiring and on par with all of these guys. This was the year when he established [*Hypnotized Minds*](https://www.youtube.com/watch?v=Jq6CaFjJJlY) among many other stout boulders. Inspecting the full tick list for Daniel in 2013, the top climbers of 2019 Jimmy and Giul, and the top climbers of 2025 Noah and Will. The plot thickens:
 
 ![[peakYearComparison.html.html]]
-
 >[!warning] This Plot is Best on a Computer
 > This plot has hover information that is best viewed with desktop browser and the aid of a mouse. When viewed on a mobile device, it is less informative. At least turn your phone sideways you animal.
 
@@ -166,23 +165,50 @@ The attention economy effects more than just the strategy of professional climbe
 To this see this let's set aside $F_\mathrm{8a.nu}$ metric, and instead look at just the raw ascent data. Inspecting the distribution of the top 50 climbers' ascents for the years of 2020-2025, it is clear that the general behavior of this elite group has changed. 
 
 ![[top50ClimbersAscents.2020-2025.png|center]]
-In particular, we see that over the last 6 years, the number of **claimed** ascents 8C/V15 and harder has skyrocketed. This may be because climber are getting better, but I think it is more likely that climbers got a little bit better and at the same time felt the pressure of the attention economy. Climbers rationally responded to market forces by **claiming** to send harder boulders than they used to. Just because someone is telling you a boulder is a grade does not necessarily mean the boulder is that grade. Climbs should upgraded and downgraded. Clearly, the data supports the claim that people want us to pay attention to them.
+In particular, we see that over the last 6 years, the number of **claimed** ascents 8C/V15 and harder has skyrocketed. While the number of ascents has increased in general over the last 25 years for all the grades shown, in the last two years fewers climbs are being reports for the grads 7C/V9-8a/V11. 
+![[ascentsByYear.html.html]]
 
-There is statistical evidence that elite boulders changed their behavior. To see this, let's use some real statistical tools
+>[!note] Plot is Best on Desktop Browser
+> Isolate a particular grade by double clicking on it in the legend, or you can turn a grade on and off with a single click. Zoom in by clicking and dragging.
+
+Climber are getting better, but it is more likely that climbers got a little bit better and at the same time felt the pressure of the attention economy. Climbers rationally responded to market forces by focusing on and **claiming** to send harder boulders than they used to. 
+
+>[!error] 🌡️ Lukewarm Take
+>Just because someone is telling you a boulder is a grade does not necessarily mean the boulder is that grade.
+
+ Climbs should upgraded and downgraded. Clearly, the data supports the claim that people want us to pay attention to them. There is statistical evidence that elite boulders changed their behavior. To see this, let's use some real statistical tools.
 
 ![[arimaxGrades.2001.2023.html.html]]
+
+>[!note] Plot is Best on Desktop Browser
+>Scroll down to see plots for 8C+/V16 and 9A/V17. Hover your mouse to see confidence interval information. Zoom in by clicking and dragging.
+
 The dots correspond to the number of ascents logged for in a given year. Each dashed line corresponds to the expected number ascents according to an [ARIMA]() model that was fit to predict the number of ascents for the grades of $y_t =(8C, 8C+, 9A)^\top$. The shading corresponds to a 99% confidence interval. These models provide a predicted mean and uncertainty information. This gives us the ability to have confidence intervals and run hypothesis tests with ease. Basically, at each time the number of ascents is modeled by a [Gaussian](https://en.wikipedia.org/wiki/Normal_distribution). The ascents logged between 2001-2023 were used to fit these models. 
 
-Also, the ascents logged below the grad of interest were used as [*exogenous*](https://en.wikipedia.org/wiki/Exogenous_and_endogenous_variables) data. For the 8C/V15 model in yellow, the model is aware of how many 8B+/V14, 8B/V13, and so on were done in that year and the years leading up to the current year. If there was a meaniful trend in the slightly lower grades corresponding to younger climbers *moving up the ranks*, then the model would *learn* this. In essence, the model tries to account rising elite boulderers who may have only been climbing 8A-8B+ in the years leading up to 2024 and 2025, but then may be peaking now. In essence, considering lower grades in the predictive model imposes correlatation in the prediction. 
+Also, the ascents logged 8A+/V12 up to the grade of interest were used as [*exogenous*](https://en.wikipedia.org/wiki/Exogenous_and_endogenous_variables) data. For the 8C/V15 model in yellow, the model is aware of how many 8B+/V14, 8B/V13, and 8A+/V12 were reported in that year and the years leading up to the current year. If there was a meaniful trend in the slightly lower grades corresponding to younger climbers *moving up the ranks*, then the model would *learn* this. In essence, the model tries to account rising elite boulderers or rising level of the sport as a whole. Thus, if the sport has been *ramping* up in the years leading up to 2024 and 2025, the model would use this information to predict that more hard boulders would get completed in the coming year. 
 
-The years of 2024 and 2025 were excluded from the fit, because the goal of this excercise was to see if their is a **statistically significant** change in the behavior of ascents logged, and difinitively there is a drastic change in the dynamics of the system. To see this hover your mouse over those the years of 2024 and 2025; hypothesis test information is available. At a significance level of $\alpha=0.05=5\%$, the hypothesis test would reject the null hypothesis for 8C+ and 9A in both 2024 and 2025. The test barely fails to reject for the number of 8C ascents logged in 2024 with $\mathbb{P}\left(\frac{x_{2024} - \bar{x}_{2024}}{s_{2024}} \geq z_{\alpha=0.05}\right) = 0.06$, and the test for 8C does fail in 2025. If you want to understand time series, I suggest reading [[Brockwell and Davis - 2016 - Introduction to Time Series and Forecasting.pdf#page=169|Brockwell and Davis (2016)]].
+The years of 2024 and 2025 were excluded from the fit, because the goal of this excercise was to see if their is a **statistically significant** change in the behavior of climbers, and there is a drastic change in the dynamics of the system in these years. Breaking down the hypothesis tests: 
+- At a significance level of $\alpha=0.05=5\%$, the hypothesis test would reject the null hypothesis for 8C+ and 9A in both 2024 and 2025. 
+- The test barely fails to reject for the number of 8C ascents logged in 2024 with $\mathbb{P}\left(\frac{x_{2024} - \bar{x}_{2024}}{s_{2024}} \geq z_{\alpha=0.05}\right) = 0.06$, and the test for 8C does fail in 2025. 
+If you want to understand time series, I suggest reading [[Brockwell and Davis - 2016 - Introduction to Time Series and Forecasting.pdf#page=169|Brockwell and Davis (2016)]] and if you want to better understand mathematical statistics, I suggest reading [[Corcoran - The Simple and Inﬁnite Joy of Mathematical Statist.pdf|Corcoran (2022)]]
 
 >[!summary] Take Away : Climbers certainly have changed their behavior; Grade inflation is possible
 >There is statistically significant evidence that climbers behavior changed in 2024 and 2025. This could mean they are just allocating their time differently, and elite boulderers are prioritizing climbing more 8C, 8C+, 9A boulders than ever before. Because the number of 8B and 8B+ did not go down during this time, the idea that they are just allocating their time differently raises my eyebrows. More likely, the grades are inflated.
 
-Unfortunately, climbers are not incentivized to build a true consensus on grades. For instance, there is a notable Swiss climber who gets paid bonuses for every first ascent 8C and harder he establishes. Beyond this example, just look at peoples scorecards on 8a.nu or read a few Instagram captions. People love to say "this climb is hard/soft". In private conversations, people are usually much more forth coming with their opinions on grades. I argue people should strive to be open and honest **on** the internet as well. Downgrade when appropriate, upgrade when appropriate (even if the [pros](https://youtu.be/Z7kmVhxaTVc?si=I7aVoniApC26MGhh&t=3907) won't). I am a firm believe that both sandbagging and candy-bagging do a disservice to the sport. 
+---
+### A Cry in the Darkness: Consensus 
 
->[!error] Hot Take: Grade Dishonesty
+>[!note] It's in Da Bible
+>I'm usually note on to pull together the Judeo-Christian philosophy, math, and climbing all in the same breath, but y'all pagans scared Jesus into me.
+>**Proverbs 12:22a**
+><center>Lying lips are an abomination</center>
+>
+> **Jeremiah 13:17**
+> <center>"But if you do not listen, I will weep in secret because of your pride. My eyes will overflow with tears, because the flock has been taken captive"</center>
+
+Unfortunately, there are currently not incentives to build a true consensus on grades. Anecdotally, there is a notable Swiss climber who gets paid bonuses for every first ascent 8C and harder he establishes. Beyond this example, just look at peoples scorecards on 8a.nu or read a few Instagram captions. People love to say "this climb is hard/soft". In private conversations, people are usually much more forth coming with their opinions on grades. I argue people should strive to be open and honest **on** the internet as well. Downgrade when appropriate, upgrade when appropriate (even if the [pros](https://youtu.be/Z7kmVhxaTVc?si=I7aVoniApC26MGhh&t=3907) won't). I am a firm believe that both sandbagging and candy-bagging do a disservice to the sport. 
+
+>[!error] Hot Take: Grade Dishonesty is Bad Up and Down
 > In general, unc's think it makes them tough to take harder grades, but this likely comes from a place of personal insecurity as they age. Often they only really do this at grades that don't effect their ego but just other peoples egos... This is petty. 
 > 
 > ![[theGreyMeme.png]]
@@ -200,7 +226,7 @@ I liken this grade inflation to the current state of tech stocks with the rise o
 ![[HermMeme.gif|center]]
 
 # Closing Remarks
-Now that I dragged you through some math, or you skipped it because your lazy 🙄, let's close with a brief overview. I grant that quantitative analysis of our sport suffers from many challenges: a lack of reliable data, ambiguity when modeling the system, and other complicating factors. In particular, the grades that climbers report may be wrong. This was discussed previously in the discussion of [[gradesDirtyDetails#Bias|reporting bias]] effecting bouldering grades. 
+Now that I dragged you through some math and a sermon, or you skipped it because your lazy 🙄, let's close with a brief overview. I grant that quantitative analysis of our sport suffers from many challenges: a lack of reliable data, ambiguity when modeling the system, and other complicating factors. In particular, the grades that climbers report may be wrong. This was discussed previously in the discussion of [[gradesDirtyDetails#Bias|reporting bias]] effecting bouldering grades. 
 
 I concede it is challenging to understand what it means to be excellent in climbing. I implore everyone to not immediately pigeonhole the discussion before we even start. The complexity of our sport is why climbing is such a compelling topic. Unlike power lifting or the 100m dash, our sport has a lot to more unpack beyond "number is higher/lower". The complexity involved with describing our pursuit is why climbing is a compelling topic of conversation.
 
