@@ -190,6 +190,7 @@ Also, the ascents logged 8B/V13 up to the grade of interest were used as [*exoge
 The years of 2024 and 2025 were excluded from the fit, because the goal of this excercise was to see if their is a **statistically significant** change in the behavior of climbers, and there is a drastic change in the dynamics of the system in these years. Breaking down the hypothesis tests: 
 - At a significance level of $\alpha=0.05=5\%$, the hypothesis test would reject the null hypothesis for 8C+ and 9A in both 2024 and 2025. 
 - The test barely fails to reject for the number of 8C ascents logged in 2024 with $\mathbb{P}\left(\frac{x_{2024} - \bar{x}_{2024}}{s_{2024}} \geq z_{\alpha=0.05}\right) = 0.06$, and the test for 8C does fail in 2025. 
+
 If you want to understand time series, I suggest reading [[Brockwell and Davis - 2016 - Introduction to Time Series and Forecasting.pdf#page=169|Brockwell and Davis (2016)]] and if you want to better understand mathematical statistics, I suggest reading [[Corcoran - The Simple and Inﬁnite Joy of Mathematical Statist.pdf|Corcoran (2022)]]
 
 >[!summary] Take Away : Climbers certainly have changed their behavior; Grade inflation is possible

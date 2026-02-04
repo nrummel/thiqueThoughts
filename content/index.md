@@ -20,4 +20,4 @@ My name is Nic Rummel, and I am an avid rock climber and applied mathematician. 
 - Email: nicrummel (symbol you should know but the AI MAYBE wont) gmail (ending you should know)
 - IG: [thique_nicc](https://www.instagram.com/thique_nicc/) I usually respond to DM requests
 # FAQ 🙋
-- [[howToMakeThisWebSite|How Nic Make This WebSite❓]]
+- [[howToMakeThisWebSite|How to make this WebSite❓]]
