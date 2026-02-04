@@ -1,5 +1,5 @@
 ---
-title: Bouldering Excellence - Crafting Better Metrics 📊
+title: 📊 Crafting Better Metrics 📊
 date: 2026-01-28
 draft: false
 ---

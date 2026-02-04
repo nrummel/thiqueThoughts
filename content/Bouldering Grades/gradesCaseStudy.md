@@ -1,5 +1,5 @@
 ---
-title: Grades - Case Study
+title: Case Study - Mt. Blue Sky
 date: 2024-07-30
 draft: false
 ---

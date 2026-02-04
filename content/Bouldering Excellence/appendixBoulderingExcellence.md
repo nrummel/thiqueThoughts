@@ -1,5 +1,5 @@
 ---
-title: Bouldering Excellence - Appendix 
+title: 📈 Appendix 📉 
 date: 2026-01-19
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: Grades - Dirty Details 🧮 
+title: 🧮 Dirty Mathematical Details 🧮 
 date: 2024-07-30
 draft: false
 ---

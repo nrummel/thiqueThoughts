@@ -1,5 +1,5 @@
 ---
-title: Grades - A Mathematical Perspective
+title: Bouldering Grades
 date: 2024-07-30
 draft: false
 ---

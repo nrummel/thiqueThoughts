@@ -4,7 +4,7 @@ import { FileTrieNode } from "./quartz/util/fileTrie"
 
 export const NicsExplorer = {
   // title: "Look Around My Mind",  
-  folderClickBehavior: "collapse", 
+  folderClickBehavior: "link", 
   folderDefaultState: "collapsed", 
   useSavedState: true, 
   sortFn: (a : FileTrieNode, b : FileTrieNode) => {

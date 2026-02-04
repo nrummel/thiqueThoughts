@@ -1,5 +1,5 @@
 ---
-title: Bouldering Excellence - An Overview
+title: Bouldering Excellence
 date: 2026-01-19
 draft: false
 ---
@@ -162,7 +162,7 @@ Kaya likely has gained market share for more casual climbers, but a cursory glan
 
 The attention economy effects more than just the strategy of professional climbers, it also is effecting the grades people take for their ascents. Because "the algorithm" has learned that only 9A/V17 gets likes, comments, and shares, climbers have responded by inflating their grades. 
 
-To this see this let's set aside $F_\mathrm{8a.nu}$ metric, and instead look at just the raw ascent data. Inspecting the distribution of the top 50 climbers' ascents for the years of 2020-2025, it is clear that the general behavior of this elite group has changed. 
+To this see this let's set aside $F_\mathrm{8a.nu}$ metric, and instead look at just the raw ascent data. Inspecting the distribution of the all available data for bouldering ascents for the years of 2020-2025, it is clear that the general behavior of this elite group has changed. 
 
 ![[top50ClimbersAscents.2020-2025.png|center]]
 In particular, we see that over the last 6 years, the number of **claimed** ascents 8C/V15 and harder has skyrocketed. While the number of ascents has increased in general over the last 25 years for all the grades shown, in the last two years fewer climbs are being reports for the grads 7C/V9-8A+/V12. 
